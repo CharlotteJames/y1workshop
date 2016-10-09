@@ -1,0 +1,104 @@
+% Include the headers needed by the questions here
+\usepackage{probsoln}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{../utils/shortlst}
+\usepackage{color}
+
+%
+% change list-making
+%
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\def\labelenumi{(\theenumi)}
+%\renewcommand{\theenumii}{\roman{enumii}}
+%\def\labelenumii{(\theenumii)}
+
+%
+% The probsoln package already has the \newproblem and \newproblem* commands
+% similar to \problem below. Apart from not supporting as many options, the
+% main difference is that this \problem command does not show the original
+% problem at the same time as the answer.
+%
+% I prefer this since it means that I can put the questions and answers on the
+% same sheet and the students won't be too tempted to spend all their time
+% reading from the solutions part (as they would if it had both the questions
+% and the answers).
+%
+\newcommand{\problem}[4]{
+  \begin{defproblem}{#1}
+    #2    % Header for problem and solution (use for \newcommand etc)
+    \begin{onlyproblem}
+      #3  % Problem
+    \end{onlyproblem}
+    \begin{onlysolution}
+      #4  % Solution
+    \end{onlysolution}
+  \end{defproblem}
+}
+
+\newcommand{\Q}[1]{
+  %\begin{onlyproblem}
+    #1
+  %\end{onlyproblem}
+}
+
+\newcommand{\A}[1]{
+  \begin{onlysolution}
+  \textcolor{blue}{
+    #1
+  }
+  \end{onlysolution}
+}
+
+\newcommand{\An}[1]{
+  \begin{onlysolution}
+
+  \fbox{\parbox{0.95\linewidth}{\A{#1}}}
+  \end{onlysolution}
+}
+
+\newcommand{\E}[1]{} % no-op - use to disable answers altogether
+
+\newcommand{\QA}[2]{\Q{#1}\A{#2}}
+
+\newcommand{\multiproblem}[2]{
+  \begin{defproblem}{#1}
+    #2
+  \end{defproblem}
+}
+
+% Custom figure command
+\newcommand{\qfigure}[2]{
+  \begin{center}
+  \includegraphics{#1}\newline
+  {\it
+    #2
+  }
+  \end{center}
+}
+
+% Trigonometric
+\newcommand{\cosec}{\mathrm{cosec}\,}
+\newcommand{\degrees}{\ensuremath{^\circ}}
+
+% Vectors
+\newcommand{\ei}{\ensuremath{\mathbf{i}}}
+\newcommand{\ej}{\ensuremath{\mathbf{j}}}
+\newcommand{\ek}{\ensuremath{\mathbf{k}}}
+
+% Calculus
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dx}[1]{\,\dd #1}
+\newcommand{\dydx}[2]{\frac{\dd#1}{\dd#2}}
+\newcommand{\dydxsq}[2]{\frac{\dd^2#1}{\dd#2^2}}
+\newcommand{\ddx} [2]{\frac{\dd}{\dd#1}\left(#2\right)}
+\newcommand\at[2]{\left.#1\right|_{#2}}
+
+% Units
+\newcommand{\newtons}{\ensuremath{\,\mathrm{N}}}
+\newcommand{\cm}{\ensuremath{\,\mathrm{cm}}}
+\newcommand{\cmsq}{\ensuremath{\,\mathrm{cm}^2}}
+\newcommand{\cmcu}{\ensuremath{\,\mathrm{cm}^3}}
+\newcommand{\metres}{\ensuremath{\,\mathrm{m}}}
+\newcommand{\mps}{\ensuremath{\,\mathrm{ms}^{-1}}}
+\newcommand{\mpssq}{\ensuremath{\,\mathrm{ms}^{-2}}}

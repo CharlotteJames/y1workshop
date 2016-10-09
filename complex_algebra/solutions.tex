@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+
+% Format similar to the template
+%\renewcommand{\familydefault}{\sfdefault} % sans font
+\usepackage{parskip} % no paragraph indent
+\usepackage[margin=1in]{geometry}
+
+% We use this to control showing questions and answers
+\input{../utils/utils}
+
+% Define the heading command for this document
+\newcommand{\heading}[1]{\begin{center}{\bf #1}\end{center}}
+
+\begin{document}
+
+\loadallproblems[questions]{questions.tex}
+
+{\centering
+Engineering Mathematics Year 1\\
+Initial test - Solutions\\
+October 2013\\
+\vspace{1in}
+}
+
+\showanswers
+\begin{enumerate}
+    \foreachproblem[questions]{
+        \item
+        %\label{prob:\thisproblemlabel}
+        \thisproblem
+        \vspace{.5in}
+    }
+\end{enumerate}
+
+\end{document}
