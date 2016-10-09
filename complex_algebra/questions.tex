@@ -1,11 +1,86 @@
 %
 %
 
-\multiproblem{m1a}{
-  \Q{
-      asd
-    }
-  \An{
-      zxc
-  }
+\multiproblem{complex}{
+  \begin{enumerate}
+      \item Complex numbers: A complex number $z$ is any number that can be
+          represented in the form $z = x+j\,y$ where $x$ and $y$ are real
+          numbers ($x,y\in\mathbb{R}$) and $j^2 = -1$. The set of complex
+          numbers is denoted $\mathbb{C}$ and we say that $z\in\mathbb{C}$.
+      \item Real and imaginary parts: Given $z = x+j\,y$ with $x,y\in\mathbb{R}$
+          we define the real and imaginary parts of $z$ as $\real(z)=x$ and
+          $\imag(z)=y$.
+      \item Complex conjugate: The complex conjugate of a complex number
+          $z=x+j\,y$ is denoted $z^*$ and given by $z^*=x-j\,y$.
+      \item Distributivity of real parts (example): given two complex numbers
+          $z_1$ and $z_2$ show that if $z_3=z_1+z_2$ then $\real(z_3)$ =
+          $\real(z_1) + \real(z_2)$.  More generally we have that
+          \[
+              \real(z_1+z_2) = \real(z_1) + \real(z_2)
+          \]
+          We can prove this by noting that if $z_1$ is a complex number then
+          (by the definition of complex numbers above) there must be real
+          numbers $x_1$ and $y_1$ such that $z_1 = x_1 + j\,y_1$ and likewise
+          $z_2 = x_2+j\,y_2$. We have then that
+          \[
+              \real(z_1+z_2) = \real((x_1 + j\,y_1) + (x_2 + j\,y_2)
+                             = \real((x_1 + x_2) + j\,(y_1 + y_2)).
+          \]
+          Now since $x_1$ and $x_2$ are real we know that $x_1 + x_2$ is real
+          and likewise for $y_1+y_2$. It follows from the definition of the
+          real part that $x_1+x_2$ will be the real part so that
+          \[
+              \real(z_1+z_2) = x_1 + x_2 = \real(z_1) + \real(z_2)
+          \]
+          as required.
+      \item Exercises: Assuming $z,z_1,z_2\in\mathbb{C}$ and $r\in\mathbb{R}$
+          which of the following statements is true? If a statement is true
+          then prove it. Otherwise disprove it. If it is sometimes true then
+          under what conditions is it true or false? In all cases you must
+          only use the definitions above in these problems.
+          \begin{enumerate}
+              \item $\imag(z_1 + z_2) = \imag(z_1) + \imag(z_2)$
+              \item $\real(jz) = - \imag(z)$
+              \item $\imag(jz) = - \real(z)$
+              \item $\real(rz) = r\real(z)$
+              \item $\real(z_1 z_2) = \real(z_1) \real(z_2)$
+              \item $z + z^* = 2\real(z)$
+              \item $z - z^* = 2\imag(z)$
+              \item $(z_1 + z_2)^* = z_1^* + z_2^*$
+              \item $(z_1 z_2)^* = z_1^* z_2^*$
+          \end{enumerate}
+  \end{enumerate}
+}
+
+\multiproblem{Arithmetic}{
+  \begin{enumerate}
+      \item Modulus: The modulus of a complex number $z$ is denoted $|z|$
+          and is defined by $|z|=\sqrt{zz^*}$.
+          \begin{enumerate}
+              \item Show that $|z|$ is real for any complex number
+              \item Show that $|z| = |z*|$.
+              \item Show that if $z=x+j\,y$ with $x,y\in\mathbb{R}$ then
+                  $|z|^2 = x^2 + y^2$.
+              \item Which complex numbers satisfy $|z|^2 = z^2$?
+          \end{enumerate}
+      \item Inverse: Prove that for any non-zero complex number $z$ there
+          exists a multiplicative inverse $z^{-1}$ such that $zz^{-1} = 1$.
+          Find a formula for $z^{-1}$ in terms of $z$.
+      \item Divisibility: We say that a complex number $z_2$ divides another
+          complex number $z_1$ if there exists a complex number $z_3$ such
+          that $z_1 = z_2 z_3$. In this instance we would write that $z_3 =
+          \frac{z_1}{z_2}$. Show that every \emph{non-zero} complex number
+          divides every complex number and find a formula for $z_3$ in terms
+          of $z_1$ and $z_2$.
+      \item Which of the following is true? Prove/disprove as necessary.
+          \begin{enumerate}
+              \item $|z_1 z_2| = |z_1||z_2|$
+              \item $|z_1 + z_2| = |z_1| + |z_2|$
+              \item $|\frac{z_1}{z_2}| = \frac{|z_1|}{|z_2|}$
+              \item $\left(\frac{z_1}{z_2}\right)^* = \frac{z_1^*}{z_2^*}$
+          \end{enumerate}
+      \item Problem: Given $a,b,z\in\mathbb{C}$ and $|z|=1$ show that
+          $\left|\frac{az + b}{b^*z + a^*}\right| = 1$
+
+  \end{enumerate}
 }
