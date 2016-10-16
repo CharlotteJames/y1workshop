@@ -1,37 +1,16 @@
-.PHONY: clean
+LATEX = xelatex
+NAME = $(shell basename $(CURDIR))
 
-# These should be set before calling:
-#
-# NAME = particle_statics
-# QFIGS =
-# AFIGS =
-
-TEX = xelatex
-QUESTIONS = questions.tex
-UTILS = ../utils/utils.tex ../utils/shortlst.sty
-QDEPS = $(QFIGS) $(QUESTIONS) $(UTILS)
-ADEPS = $(QDEPS) $(AFIGS)
+EXPECTED_FILES = questions.tex preamble.tex title.tex
 
 all: $(NAME)_exercises.pdf $(NAME)_solutions.pdf
 
-clean:
-	rm -f *.aux *.log *.out *.pdf
-	rm -f images/*.pdf
+%_exercises.pdf: ../utils/exercises.tex $(EXPECTED_FILES)
+	$(LATEX) -jobname=$(NAME)_exercises ../utils/exercises.tex
+	$(LATEX) -jobname=$(NAME)_exercises ../utils/exercises.tex
+	rm *.aux *.log
 
-$(NAME)_exercises.pdf: exercises.tex $(QDEPS)
-	$(TEX) $<
-	$(TEX) $<
-	cp exercises.pdf $@
-	rm exercises.pdf *.aux *.log
-
-$(NAME)_solutions.pdf: solutions.tex $(QDEPS) $(ADEPS)
-	$(TEX) $<
-	$(TEX) $<
-	cp solutions.pdf $@
-	rm solutions.pdf *.aux *.log
-
-images/%.pdf: images/%.svg
-	inkscape -f "$(PWD)/$<" -A "$(PWD)/$@"
-
-images/%.pdf: images/%.py
-	./$< $@
+%_solutions.pdf: ../utils/solutions.tex $(EXPECTED_FILES)
+	$(LATEX) -jobname=$(NAME)_solutions ../utils/solutions.tex
+	$(LATEX) -jobname=$(NAME)_solutions ../utils/solutions.tex
+	rm *.aux *.log
