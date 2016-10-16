@@ -1,5 +1,6 @@
 LATEX = xelatex
-NAME = $(shell basename $(CURDIR))
+DIR = `pwd`
+NAME = $(shell basename $(DIR))
 
 EXERCISES = $(NAME)
 SOLUTIONS = $(NAME)_solutions
@@ -11,6 +12,7 @@ EXPECTED_FILES = questions.tex preamble.tex title.tex
 all: $(OUTDIR)/$(EXERCISES).pdf $(OUTDIR)/$(SOLUTIONS).pdf
 
 $(OUTDIR)/$(EXERCISES).pdf: ../utils/exercises.tex $(EXPECTED_FILES) $(CURDIR)
+	echo EXERCISES=$(EXERCISES)
 	$(LATEX) -jobname=$(EXERCISES) -output-directory=$(OUTDIR) ../utils/exercises.tex
 	$(LATEX) -jobname=$(EXERCISES) -output-directory=$(OUTDIR) ../utils/exercises.tex
 	rm $(OUTDIR)/*.aux $(OUTDIR)/*.log
