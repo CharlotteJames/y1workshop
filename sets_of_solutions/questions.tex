@@ -34,6 +34,8 @@
             with $a,b,x\in\mathbb{Z}$ and $n\in\mathbb{N}$.
             \begin{enumerate}
                 \item If $x = 1 \Mod{3}$ what is the solution set for $x$?
+                \item If $x = b \Mod{p}$ with $p$ prime what are the sets of
+                    solutions for different values of $b$ and $p$?
                 \item If $a\,x = b \Mod{p}$ with $p$ prime what are the sets of
                     solutions for different values of $a$ and $b$?
                 \item What could happen to the solution set if $p$ is not
@@ -44,14 +46,14 @@
 
 \multiproblem{quadratic}{
     It's common for mathematical problems to be posed in such a way that the
-    number of solutions (the cardinality of the solution set) will be either
-    $0$, $1$ or $\infty$. When the number of solutions is $0$ we say that a
-    solution does not \emph{exist}. If a solution exists but there is more
-    than one we say that we do not have a \emph{unique} solution. In many
+    number of solutions (the size/cardinality of the solution set) will be
+    either $0$, $1$ or $\infty$. When the number of solutions is $0$ we say
+    that a solution does not \emph{exist}. If a solution exists but there is
+    more than one we say that we do not have a \emph{unique} solution. In many
     areas there will be conditions guaranteeing existence and uniqueness so
     that we can know when there will be exactly one solution.
 
-    The most common exception to the $1,0,\infty$ pattern is when dealing
+    The most common exception to the $0,1,\infty$ pattern is when dealing
     with polynomial equations. Here we consider the quadratic equation
     \begin{equation}
         a\,x^2 + b\,x + c = 0.
@@ -81,15 +83,16 @@
                 2x^5 - x^4 + 4x^3 - 2x^2 + 2x - 1 = 0
                 \label{eq:quintic}
             \end{equation}
-        \item Given $a,b,c,x\in\mathbb{Q}$ we can write $a=\frac{n_a}{n_d}$
+        \item Given $a,b,c,x\in\mathbb{Q}$ we can write $a=\frac{n_a}{d_a}$
             etc. and then multiply through by the square of all of the
             denominators to obtain an equation in the same form
             as~\eqref{eq:quad} but with $a,b,c\in\mathbb{Z}$ and
             $x\in\mathbb{Q}$ (prove/verify this).
 
             Suppose that $a,b,c\in\mathbb{Z}$ and $x\in\mathbb{Q}$ and that
-            there exists a rational solution $x=\frac{n}{d}$ with
-            $d,n\in\mathbb{Z}$. Show that $n$ divides $c$ and $d$ divides $a$.
+            there exists a rational solution $x=\frac{n}{d}$ (
+            $d,n\in\mathbb{Z}$). Show that $n$ divides $c$ and $d$ divides
+            $a$.
 
             How would this generalise to higher order polynomials? Hence find
             the set of all rational solutions to~\eqref{eq:quintic}.
@@ -122,7 +125,7 @@
             for them).
 
             What is the set of solutions for $x$ satisfying the equilibrium
-            conditions in the case that the ground is smooth $\mu=0$?
+            conditions in the case that the ground is smooth ($\mu=0$)?
 
             What happens to the set of solutions in the case that the ground
             is rough?
@@ -142,6 +145,7 @@
 
             Assuming the ground is smooth For what values of $y$ is
             equilibrium possible if $d < l_0$? What if $d = l_0$ or $d > l_0$?
+            Sketch the relationship between $y$ and $d$.
 
             What would happen if the ground was rough?
     \end{enumerate}
