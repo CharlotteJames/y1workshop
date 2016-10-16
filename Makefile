@@ -4,7 +4,10 @@ WORKSHEETS =\
 			#
 
 FIGURES =\
-		 sets_of_solutions/mass_horizontal.pdf
+		 sets_of_solutions/mass_horizontal.pdf\
+		 sets_of_solutions/mass_slope.pdf\
+		 sets_of_solutions/mass_wall.pdf\
+		 #
 
 all: $(WORKSHEETS)
 

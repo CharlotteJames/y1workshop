@@ -97,8 +97,52 @@
 }
 
 \multiproblem{physics}{
+    These next problems will look at sets of solutions in the context of
+    simple statics problems. The main things that we need to know from
+    physics are Newton's first law for equilibria, Hooke's law ($F=-kx$) for a
+    linear spring, and the static friction constraint $F\le\mu N$. Also any
+    normal reaction force must satisfy $N\ge 0$.
+
+    (The general principle for answering these questions is to begin by
+    drawing a free-body diagram. Then choose coordinate axes and resolve
+    forces into components. You can then use Newton's first law, Hooke's law
+    and the friction constraint to obtain a system of equations/inequalities
+    to be solved mathematically.)
+
     \begin{enumerate}
-        \item Consider this system:\newline
-            \includegraphics{mass_horizontal.pdf}
-    \end{enumerate}<++>
+        \item Consider the mass spring system shown here:\newline
+            \begin{center}
+                \includegraphics{mass_horizontal.pdf}
+            \end{center}
+            The symbols are $g$ the gravitational constant, $m$ the mass of
+            the particle, $k,l_0$ the stiffness and natural length of the
+            spring, $\mu$ the friction coefficient between the ground and the
+            particle, and $x$ the extension of the spring. All quantities
+            apart from $x$ are known (even though we won't use numeric values
+            for them).
+
+            What is the set of solutions for $x$ satisfying the equilibrium
+            conditions in the case that the ground is smooth $\mu=0$?
+
+            What happens to the set of solutions in the case that the ground
+            is rough?
+        \item Now consider a mass on a slope
+            \begin{center}
+                \includegraphics{mass_slope.pdf}
+            \end{center}
+            at an angle $\alpha$. For what values of $\alpha$ is equilibrium
+            possible if the slope is smooth? What if it is rough with
+            coefficient $\mu$?
+        \item Here we have a mass which is forced against the ground by a
+            spring:
+            \begin{center}
+                \includegraphics{mass_wall.pdf}
+            \end{center}
+            We can ignore gravity in this problem.
+
+            Assuming the ground is smooth For what values of $y$ is
+            equilibrium possible if $d < l_0$? What if $d = l_0$ or $d > l_0$?
+
+            What would happen if the ground was rough?
+    \end{enumerate}
 }
