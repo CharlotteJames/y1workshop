@@ -1,0 +1,173 @@
+\multiproblem{lineareqns}{
+    Solve the following systems of equations using Gaussian elimination. Note
+    that the first example is easier to solve by substitution - the advantage
+    of Gaussian elimination becomes clearer as the system gets larger.
+    \begin{enumerate}
+        \item
+            \begin{align*}
+                x + 7y &= -13 \\
+                2x + y &= 0
+            \end{align*}
+        \item
+            \begin{align*}
+                -x + 3y + 4z &= 5  \\
+                7x +  y + 6z &= -3 \\
+                2x -  y -  z &= 3  \\
+            \end{align*}
+        \item
+            \begin{align*}
+                2x + 6y - 2z - 2w &= -9 \\
+                4x + 12y +2z - 2w &= 4  \\
+                     2y - 6z + 2w &= -13\\
+                2x + 2y + 2z + 2w &= 9
+            \end{align*}
+    \end{enumerate}
+}
+
+\multiproblem{nonunique}{
+    In general systems of linear equations can be written in matrix form
+    \[
+        \mathrm{Mx} = \mathrm{y}
+    \]
+    where $\mathrm{M}$ is a (known) matrix, $\mathrm{y}$ is a known vector and
+    $\mathrm{x}$ is an unknown vector e.g.
+    \[
+        \mathrm{x} =
+            \begin{pmatrix}
+                x \\ y \\ z
+            \end{pmatrix}
+    \]
+    Given this equation in matrix form it is clear that if the matrix is
+    invertible then we have a unique solution since we can multiply both sides
+    to find that
+    \[
+        \mathrm{M}^{-1} (\mathrm{Mx}) = \mathrm{M}^{-1}\mathrm{y}
+    \]
+    Working on the left hand side we see that (using associativity of matrix
+    multiplication and definition of the inverse matrix)
+    \[
+        \mathrm{M}^{-1} (\mathrm{Mx}) =
+        (\mathrm{M}^{-1} \mathrm{M})\mathrm{x} =
+        \mathrm{I}\mathrm{x} =
+        \mathrm{x}.
+    \]
+    Putting this together we have
+    \[
+        \mathrm{x} = \mathrm{M}^{-1}\mathrm{y}.
+    \]
+    So if the matrix $\mathrm{M}$ is invertible then there is a unique
+    solution to the system of equations. The matrix is invertible if
+    $\mathrm{det\,M}\neq 0$. Otherwise the system of equations may have zero
+    solutions or infinitely many solutions. In each of the following problems
+    you should calculate the determinant \emph{and} use Gaussian elimination
+    to see what happens.
+
+    \begin{enumerate}
+        \item Find the set of solutions to
+            \begin{align*}
+                x + y + z  &= 1 \\
+                x - y - 2z &= 2 \\
+                4x - 2z    &= 6
+            \end{align*}
+            (The set of solutions is of the form $\{\mathrm{v}_1 + \alpha
+            \mathrm{v}_2 : \alpha \in \mathbb{R}\}$ for some vectors
+            $\mathrm{v}_1$ and $\mathrm{v}_2$ that you should find.)
+        \item Find the set of solutions to
+            \begin{align*}
+                x + y + z  &= 1 \\
+                x - y - 2z &= 2 \\
+                4x - 2z    &= 5
+            \end{align*}
+        \item For what values of $c$ does the following system \emph{not} have
+            a unique solution?
+            \begin{align*}
+                x  -  y +  z &= 1 \\
+                2x + cy + 3z &= 0 \\
+                0x +  y + 2z &= -1
+            \end{align*}
+            What is the set of solutions in that case?
+    \end{enumerate}
+}
+
+\multiproblem{polynomials}{
+    Consider trying to find the coefficients of a polynomial $P(x)$ whose
+    curve $y=P(x)$ passes through a set of points in the $x,y$ plane. This
+    naturally gives us a system of linear equations that may or may not have a
+    unique solution.
+    \begin{enumerate}
+        \item We want to find a polynomial that passes through the points
+            $(-1,8)$, $(0, 3)$ and $(1, 0)$. Find the set of all quadratic
+            (i.e. $P(x)=ax^2+bx+c$) polynomials that pass through these three
+            points.
+        \item Find the set of all linear polynomials ($P(x)=ax+b$) passing
+            through the same three points (draw a diagram to interpret this
+            result).
+        \item Find the set of all quadratic polynomials passing through only the
+            two points $(0, 3)$ and $(1,0)$ - sketch a few of them.
+        \item Consider trying to find a unique quadratic polynomial passing
+            through three points $(x_1,y_1)$, $(x_2,y_2)$ and $(x_3,y_3)$.
+            Under what conditions on the coordinates $x_i$ and $y_i$ will
+            their be a unique polynomial?
+    \end{enumerate}
+}
+
+\multiproblem{supports}{
+    Here we consider problems involving force and moment balance which also
+    naturally lead to systems of linear equations
+    \begin{enumerate}
+        \item A rectangular body of length $4\,\mathrm{m}$ and height
+            $2\,\mathrm{m}$ is subject to three different forces. The weight
+            $mg$ acts at the centre of the body. Another force $F_1$ acts at
+            the upper left corner at an angle of $30^{\circ}$ to the
+            horizontal. A third force $F_2$ acts $1\,\mathrm{m}$ from the
+            upper-right corner at an angle $\alpha$.
+            \begin{center}
+                \includegraphics{moments.pdf}
+            \end{center}
+            Find the magnitude of the unknown force $F_1$ and also the force
+            vector for $F_2$. Hence find the angle $\alpha$.
+        \item Consider a rod of (known) length $l$ and mass $m$ resting on two
+            supports as shown
+            \begin{center}
+                \includegraphics{supports2.pdf}
+            \end{center}
+            Using force and moment balance find the two (unknown) support
+            forces $N_1$ and $N_2$ and verfiy that they satisfy the required
+            constrain for a resting support ($N_i \ge 0$).
+        \item Consider the same but with three supports
+            \begin{center}
+                \includegraphics{supports3.pdf}
+            \end{center}
+            Using force and moment balance find the set of possible values for
+            the three support forces $N_1$, $N_2$, and $N_3$. Can we get a
+            unique solution by taking moments about more than one place?
+            Considering the resting constraint ($N_i \ge 0$) find minimum and
+            maximum values for each of the three support forces.
+    \end{enumerate}
+}
+
+\multiproblem{algebraic}{
+    Given a system of linear equationsin matrix form as
+        $\mathrm{Mx} = \mathrm{y}$
+    if $\mathrm{y}=0$ then the system takes the form
+    \begin{equation}
+        \mathrm{Mx} = 0
+        \label{eq:homo}
+    \end{equation}<++>
+    and we say that the system is \emph{homogeneous}.
+    \begin{enumerate}
+        \item Show that $\mathrm{x}=0$ is always a solution of a homogeneous
+            linear system (regardless of what $\mathrm{M}$ is).
+        \item Show that there will be a non-zero solution for $\mathrm{x}$ if
+            and only if $\mathrm{det\,M}=0$.
+        \item Show that if some vector $\mathrm{x}_1$ is a solution
+            of~\eqref{eq:homo} then any scalar multiple of $\mathrm{x_1}$ (e.g.
+            $2\mathrm{x}_1$) is also a solution.
+        \item Show that given two solutions $\mathrm{x_1}$ and $\mathrm{x_2}$
+            of~\eqref{eq:homo} $a\,\mathrm{x}_1 + b\,\mathrm{x}_2$ is a
+            solution for any scalars $a$ and $b$.
+        \item Which of the previous results also holds for
+            \emph{non-homogeneous} systems of equations (with $\mathrm{y}\neq
+            0$.)?
+    \end{enumerate}
+}

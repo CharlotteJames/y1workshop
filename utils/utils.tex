@@ -108,3 +108,10 @@
 \newcommand{\imag}{\operatorname{Im}}
 
 \newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+
+
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}

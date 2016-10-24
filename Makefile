@@ -1,6 +1,7 @@
 WORKSHEETS =\
 			complex_algebra.pdf\
 			sets_of_solutions.pdf\
+			linear_systems.pdf\
 			#
 
 FIGURES =\
@@ -9,6 +10,9 @@ FIGURES =\
 		 sets_of_solutions/mass_wall.pdf\
 		 sets_of_solutions/supports.pdf\
 		 sets_of_solutions/supports2.pdf\
+		 linear_systems/supports2.pdf\
+		 linear_systems/supports3.pdf\
+		 linear_systems/moments.pdf\
 		 #
 
 all: $(WORKSHEETS)

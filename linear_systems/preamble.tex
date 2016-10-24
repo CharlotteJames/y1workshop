@@ -1,0 +1,77 @@
+In this exercise sheet we will look at systems of linear equations and how to
+solve them. In the last sheet we found that the single equations
+\[
+    a\,x = b
+\]
+with e.g. $a,b,x\in\mathbb{R}$ can have either 1, 0, or $\infty$ solutions. In
+particular we have a unique solution if $a\neq 0$. This is true more general
+of systems of linear equations -- in this case we will have a unique solution
+if the determinant of the system matrix is non-zero.
+
+Consider the system of equations
+\begin{align*}
+    x + y + 2z &= 3\\
+    x - 2y + 3z &= -5\\
+    2x + 2y + 2z &= 4
+    \label{system1}
+\end{align*}
+There are things we can do to solve this system of equations. We can multiply
+any equation by a non-zero number. We can add and subtract equations to make
+new equations. We can solve for one variable in one of the equations and use
+that to eliminate that variable from all of the other equations. The technique
+we are going to use here is called Gaussian elimination and consists in a
+combination of adding and multiplying equations to transform the system into a
+form where it is easily solved.
+
+First note that we can write this system as a single \emph{matrix equation}
+\[
+    \begin{pmatrix}
+        1 & 1 & 2 \\
+        1 & -2 & 3 \\
+        2 & 2 & 2
+    \end{pmatrix}
+    \begin{pmatrix}
+        x \\ y \\ z
+    \end{pmatrix}
+       =
+    \begin{pmatrix}
+        3 \\ -5 \\ 4
+    \end{pmatrix}
+\]
+which can in tuern be simpified by displaying in the form of an
+\emph{augmented matrix}
+\[
+    \begin{amatrix}{3}
+        1 & 1 & 2 & 3 \\
+        1 & -2 & 3 & -5 \\
+        2 & 2 & 2 & 4
+    \end{amatrix}
+\]
+We are now in a position to solve this using Gaussian elimination. Step 1 is
+to subtract the replace the second row with the result of subracting the first
+from the second. Our notation for this is $r_2 \to r_2 - r_1$. The next step
+is $r_3 \to r_3 - 2r_1$. At this point the augmented matrix looks like
+\[
+    \begin{amatrix}{3}
+        1 & 1 & 2 & 3 \\
+        0 & -3 & 1 & -8 \\
+        0 & 0 & -2 & -2
+    \end{amatrix}
+\]
+Our aim in these row operations is to reduce the matrix to this form in which
+we have all zeros below the main diagonal. Normally we do this iteratively by
+first using the top row to make all zeros below the top row in the first
+column. Then we use the second row to make all zeros below the second row in
+the second column and so on. In this particular case it turns out that the
+second column is already sorted so we don't need any more row operations.
+If we rewrite this as separate equations we find
+\begin{align*}
+    x +y + 2z &= 3\\
+     -3y + z  &= -8\\
+          -2z &= -2
+    \label{system1}
+\end{align*}
+which can be solved by back-substitution. How that works is that the last
+equations gives us the value of $z$ i.e. $z=1$. We can then substitute this
+into the second equation and find that $y=3$. Now that we have $y$ and $z$ we
+can substitute both into the first equation to find that $x=-2$.
