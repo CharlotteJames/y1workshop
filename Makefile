@@ -2,6 +2,7 @@ WORKSHEETS =\
 			complex_algebra.pdf\
 			sets_of_solutions.pdf\
 			linear_systems.pdf\
+			worksheet_4.pdf\
 			#
 
 FIGURES =\
@@ -13,6 +14,10 @@ FIGURES =\
 		 linear_systems/supports2.pdf\
 		 linear_systems/supports3.pdf\
 		 linear_systems/moments.pdf\
+		 worksheet_4/fig_1.pdf\
+		 worksheet_4/fig_2.pdf\
+		 worksheet_4/fig_3.pdf\
+		 worksheet_4/fig_4.pdf\
 		 #
 
 all: $(WORKSHEETS)

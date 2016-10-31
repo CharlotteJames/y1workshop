@@ -1,0 +1,26 @@
+In this worksheet we consider planar statics problems, and how to solve the linear systems of equations that arise when solving them.
+
+From Newton's laws of motion, for the static equilibrium of a body both translational forces and moments must balance. Specifically, the vector sum of the external forces must equal zero:
+\begin{equation} \label{eq:trans}
+ \sum_{i} {\bf F}_{i}= \bf{0}
+\end{equation}
+This is called the {\em external force balance}. Also, the sum of moments, $\bf{M}$, about an arbitrary point ${\bf r}$ of all forces is zero:
+\begin{equation} \label{eq:mom}
+ \sum_{i} {\bf M}_{i}= \sum_{i} ({\bf r}_{i}-{\bf r}) \times {\bf F}_{i}= 0.
+\end{equation}
+This is called the {\em external torque balance}. It can be proven that there is no additional linearly independent balance solely involving the external forces.
+
+Now for planar statics problems, \eqref{eq:trans}
+\[
+ {\bf F}_{i}=\begin{pmatrix}
+         F_{i,x} \\ F_{i,y} \\ 0
+        \end{pmatrix}
+\]
+so it follows that the external force balance yields two equations, $\sum F_{i,x} =0$ and $\sum F_{i,y}=0$. Also, the magnitude of the moment can be found by simply multiplying the force by the perpendicular distance through which it levers. For such problems \eqref{eq:mom} yields a single equation for the external torque balance.
+
+For a given statics problem with more unknowns than equations, the system of simultaneous equations does not have a unique solution and the problem is said to be {\em statically indeterminate}.
+
+If one body is {\em resting} on another, the reaction force $N$ must be positive.
+
+If friction acts a point of contact, the friction condition $F\leq \mu N$ must always be satisfied.
+
