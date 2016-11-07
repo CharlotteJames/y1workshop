@@ -1,0 +1,286 @@
+\multiproblem{1}{
+For the following homogeneous linear systems, use Gaussian elimination (constructing the augmented matrix and performing row operations) to obtain the set of solutions. What is the cardinality (size) of this set?
+
+\begin{enumerate}
+\item 
+\begin{equation*}
+\begin{pmatrix}
+ 1 & -1 & 2 \\
+ 2 & 1 & 1 \\
+ 1 & 1 & 0
+\end{pmatrix}
+ \begin{pmatrix}
+  x \\ y \\ z
+ \end{pmatrix}
+=
+\begin{pmatrix}
+ 0 \\ 0 \\ 0
+\end{pmatrix}.
+\end{equation*}
+
+Show that the vectors
+\begin{equation*}
+ {\bf x_1}=
+ \begin{pmatrix}
+  -3 \\ 3 \\ 3
+ \end{pmatrix}
+\hspace{10pt}\text{and}\hspace{10pt}
+ {\bf x_2} =
+ \begin{pmatrix}
+  2 \\ -2 \\ -2
+ \end{pmatrix}
+\end{equation*}
+are solutions of this system. By explicit calculation, verify whether ${\bf x_1}+{\bf x_2}$ is also solution.
+
+\item 
+\begin{equation*}
+\begin{pmatrix}
+ 1 & 7 & -4 \\
+ 2 & 4 & -1 \\
+ 3 & 1 & 2
+\end{pmatrix}
+ \begin{pmatrix}
+  x \\ y \\ z
+ \end{pmatrix}
+=
+\begin{pmatrix}
+ 0 \\ 0 \\ 0
+\end{pmatrix}.
+\end{equation*}
+
+Show that the vectors
+\begin{equation*}
+ {\bf x_1}=
+ \begin{pmatrix}
+  -9 \\ 7 \\ 10
+ \end{pmatrix}
+\hspace{10pt}\text{and}\hspace{10pt}
+ {\bf x_2} =
+ \begin{pmatrix}
+  -3 \\ \frac{7}{3} \\ \frac{10}{3}
+ \end{pmatrix}
+\end{equation*}
+are solutions of this system. By explicit calculation, verify whether ${\bf x_1}+{\bf x_2}$ is also solution.
+
+ \item \begin{equation*}
+\begin{pmatrix}
+ -1 & 1 & -1 \\
+ 3 & -1 & -1 \\
+ 2 & 1 & -3
+\end{pmatrix}
+ \begin{pmatrix}
+  x \\ y \\ z
+ \end{pmatrix}
+=
+\begin{pmatrix}
+ 0 \\ 0 \\ 0
+\end{pmatrix}.
+\end{equation*}
+\end{enumerate}
+}
+
+\multiproblem{2}{
+Consider the homogeneous matrix equation~\eqref{eq:homo}.
+where ${\bf A}$ is a known $n\times n$ matrix, ${\bf 0}$ is the $n \times 1$ zero vector and ${\bf x}$ is a $n \times 1$ vector of unknowns to be found. This is an example of a homogeneous linear system of equations.
+\begin{enumerate}
+ \item Prove that ${\bf x}={ \bf 0}$ is always a solution to \eqref{eq:homo}.
+     This solution is known as the {\em trivial} solution. Any non-zero
+     solutions to \eqref{eq:homo}, if they exist, are called {\em non-trivial} solutions. 
+ \item Prove that if ${\bf x}$ is a solution to \eqref{eq:homo} then $ \alpha
+     {\bf x}$ is also a solution, for any scalar $\alpha$ (e.g. for
+     $\alpha\in\mathbb{R}$ or $\alpha\in\mathbb{C}$ etc.).
+ \item Assume that ${\bf x}_1$ and ${\bf x}_2$ are both solutions to
+     \eqref{eq:homo}. Prove that ${\bf x}_{1} + {\bf x}_{2}$ is also a
+     solution to \eqref{eq:homo}.
+ \item Given vectors ${\bf v}_{1}$ and ${\bf v}_{2}$ and scalars $\alpha$ and
+     $\beta$, $\alpha {\bf v}_{1}+\beta {\bf v}_{2}$ is called a {\em linear
+     combination} of ${\bf v}_{1}$ and ${\bf v}_{2}$. Using your results from
+     $(b)$ and $(c)$, prove that any linear combination of ${\bf x}_1$ and
+     ${\bf x}_2$ is a solution of \eqref{eq:homo}.
+ \item Assume that \eqref{eq:homo} has a non-trivial solution ${\bf x}$. Is this solution unique? Hence, what can we say about $\text{det}({\bf A})$.
+ 
+Consider the homogeneous linear system ${\bf A}{\bf x}= {\bf 0}$:
+\begin{equation} \label{homo2d}
+ \begin{pmatrix}
+  a & b \\ c & d
+ \end{pmatrix}
+\begin{pmatrix}
+ x \\ y
+\end{pmatrix}
+=
+\begin{pmatrix}
+ 0 \\ 0
+\end{pmatrix}.
+\end{equation}
+ \item  What is the condition (in terms of $a$, $b$, $c$ and $d$) for there to be a non-trivial solution to this homogeneous linear system? What is the determinant of ${\bf A}$ in this case?
+ \item Suppose that $a=4$, $b=-2$, $c=3$ and $d=3$. Consider the two equations as two lines in the $x$-$y$ plane. What are the equations of these lines? Sketch them. The intersection of the lines corresponds to the solution of \eqref{homo2d}. What is the set of solutions? Without explicitly calculating it, explain whether $\text{det}({\bf A})$ is non-zero. Explicitly calculate the determinant and verify your conclusion.
+  \item Now suppose that $a=-6$, $b=2$, $c=3$ and $d=-1$. Proceed as above in $(g)$.
+ \item If the solution to \eqref{homo2d} is non-trivial what can we say about the gradient of the two lines?
+\end{enumerate}
+ }
+
+ \multiproblem{3}{
+    Given a square matrix ${\bf A}$ we define an \emph{eigenvector} of ${\bf
+    A}$ as a \emph{non-zero} vector ${\bf v}$ such that
+    \begin{equation}
+        {\bf A v} = \lambda {\bf v}
+        \label{eq:eigen}
+    \end{equation}
+    for some scalar $\lambda$. For any given eigenvector ${\bf v}$ there is a
+    corresponding value of $\lambda$ which is known as the \emph{eigenvalue}
+    for that eigenevector.
+
+    Starting from this definition we want an
+    \emph{eigenvalue problem} is to find the eigenvectors from knowing the
+    matrix ${\bf A}$. This problem is different from~\eqref{lin}
+    or~\eqref{eq:homo} since although the left-hand side (lhs) is similar in this
+    case we also have our unknown vector ${\bf v}$ on the right-hand side
+    (rhs).
+    \begin{enumerate}
+        \item Given the matrix ${\bf C}$ with
+            \[
+                {\bf C} =
+                \begin{pmatrix}
+                    14 & -2 \\
+                    -2 & 11
+                \end{pmatrix}
+            \]
+            show that the vector ${\bf v} = (1,2)^T$ is an eigenvector and find
+            the associated eigenvalue. Further show that any multiple of ${\bf
+            v}$ (i.e. any vector of the form $(\alpha,2\alpha)^T$ with
+            $\alpha\neq 0$) is also an eigenvector with the same eigenvalue.
+        \item Suppose we have a matrix~${\bf A}$ and an eigenvector~${\bf
+            v}_i$ of ${\bf A}$ with eigenvalue~$\lambda_i$. Using
+            equation~\eqref{eq:eigen} show that in general any (non-zero)
+            scalar multiple of~${\bf v}_i$ will also be an eigenvector
+            of~${\bf A}$ with the same eigenvalue~$\lambda_i$.
+        \item Since ${\bf v} = {\bf I v}$ for any vector ${\bf v}$ where ${\bf
+            I}$ is the identity matrix show that the eigenvector
+            equation~\eqref{eq:eigen} implies that
+            \begin{equation}
+                \left({\bf A} - \lambda{\bf I}\right){\bf v} = {\bf 0}.
+                \label{eq:eigenlhs}
+            \end{equation}
+
+            Now equation~\eqref{eq:eigenlhs} looks like an improvement
+            on~\eqref{eq:eigen} since the rhs is now known. However without
+            knowing~$\lambda$ we now do not know the matrix~${\bf A} -
+            \lambda{\bf I}$ on the lhs so we are not yet in a position to
+            solve for ${\bf v}$.
+        \item Since equation~\eqref{eq:eigenlhs} is of the form
+            \[
+                {\bf B} {\bf v} = {\bf 0}.
+            \]
+            with ${\bf B} = {\bf A} - \lambda{\bf I}$ we can see that it is a
+            homogeneous system of equations (i.e. like~\eqref{eq:homo}).
+            Given the results proven for homogeneous systems earlier convince
+            yourself that since ${\bf v} \neq 0$ (by the definition of an
+            eigenvector) we must have
+            \begin{equation}
+                \det \left({\bf A} - \lambda{\bf I}\right) = 0
+                \label{eq:det}
+            \end{equation}
+            for any eigenvalue~$\lambda$.
+
+        \item Expanding equation~\eqref{eq:det} using the definition of
+            the determinant leads to a polynomial equation in~$\lambda$ known
+            as the \emph{characteristic polynomial} of the matrix ${\bf A}$.
+            The roots of this polynomial (solutions of~\eqref{eq:det}) are the
+            eigenvalues of the matrix ${\bf A}$.
+
+            Hence find the two eigenvalues $\lambda_1$ and $\lambda_2$ of the
+            matrix~${\bf C}$ defined earlier.
+        \item Once we know the eigenvalues we are in a position to
+            solve~\eqref{eq:eigenlhs} for the eigenvectors. We know that there
+            is an eigenvector~${\bf v_1}$ with eigenvector~$\lambda_1$. We
+            therefore have that
+            \[
+                ( {\bf A} - \lambda_1 {\bf I} ) {\bf v}_1 = {\bf 0}
+            \]
+            which is of the form of~\eqref{eq:homo} with both a known matrix
+            on the lhs \emph{and} a known rhs. Finally we can solve for the
+            set of possible eigenvectors~${\bf v}_1$ corresponding to the
+            eigenvalue $\lambda_1$. Hence find the set of possible
+            eigenvectors for each of the eigenvalues $\lambda_1$ and
+            $\lambda_2$ of ${\bf C}$.
+        \item Given that any scalar multiple of an eigenvector is also an
+            eigenvector it is clear that an eigenvector problem cannot have
+            unique solutions. We typically pick one of the eigenvectors from
+            the set of eigenvectors to represent the family of eigenvectors
+            understanding that any multiple will also be an eigenvector.
+            Sometimes we pick the algebraically simplest eigenvector. Another
+            common choice is to pick a \emph{unit eigenvector} i.e. an
+            eigenvector that is a unit vector. In this case we will typically
+            find that there are only two possible choices (rather than
+            infinitely many). To find this unit eigenvector we simply take
+            any eigenvector and ``normalise'' it. This gives a unique result
+            up to a possible minus sign for the eigenvector. Find the unit
+            eigenvectors of ${\bf C}$.
+    \end{enumerate}
+}
+
+\multiproblem{4}{
+    \begin{enumerate}
+        \item Show that $(0, 1, 0)^T$ is an eigenvector of
+            \[
+                \begin{pmatrix}
+                    7 & 0 & 24 \\
+                    0 & 1/2 & 0 \\
+                    24 & 0 & -7
+                \end{pmatrix}
+            \]
+            and find the corresponding eigenvalue. Hence find all eigenvectors
+            and eigenvalues of this matrix.
+        \item Which vectors are eigenvectors of the identity matrix ${\bf I}$?
+            What are their eigenvalues?
+        \item Given a diagonal matrix
+            \[
+                \begin{pmatrix}
+                    a_1 & 0 & 0 \\
+                    0 & a_2 & 0 \\
+                    0 & 0 & a_3
+                \end{pmatrix}
+            \]
+            for three different real (or complex) numbers $a_1$, $a_2$ and
+            $a_3$ what will be the eigenvectors and eigenvalues of this
+            matrix?
+        \item What will be the eigenvectors/eigenvalues of a $1 \times 1$ matrix
+            \[
+                \begin{pmatrix}
+                    a
+                \end{pmatrix}
+            \]
+            for some real (or complex) number $a$?
+        \item One result which is very useful in understanding the
+            relationship between a matrix and its eigenvectors and eigenvalues
+            is that we can often \emph{diagonalise} a matrix writing it as a
+            product of three matrices. Given a matrix ${\bf A}$ that we would
+            like to diagonalise we first define the matrix ${\bf D}$ as a
+            diagonal matrix with the eigenvalues of ${\bf A}$ on the diagonal.
+            For example if ${\bf A}$ is a $2\times 2$ matrix we have
+            \[
+                {\bf D} =
+                \begin{pmatrix}
+                    \lambda_1 & 0 \\
+                    0 & \lambda_1
+                \end{pmatrix}.
+            \]
+            We then define the matrix of eigenvectors whose rows are the
+            \emph{unit eigenvectors} (numbered in the same order as the
+            corresponding eigenvalues) e.g.
+            \[
+                {\bf O} =
+                \begin{pmatrix}
+                    {\bf v}_1 \\
+                    {\bf v}_2
+                \end{pmatrix}.
+            \]
+            A matrix~${\bf A}$ is \emph{diagonalisable} if we can write it as the
+            product
+            \[
+                {\bf A} = {\bf O}^T {\bf D} {\bf O}.
+            \]
+            Verify that the matrix ${\bf C}$ defined above is diagonalisable
+            by computing this matrix product.
+    \end{enumerate}
+}

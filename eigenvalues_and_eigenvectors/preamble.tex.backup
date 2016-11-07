@@ -1,0 +1,13 @@
+In previous worksheets we have discussed how to linear systems of equations of the form
+\[
+  A { \bf x}= {\bf b}
+\]
+through the method of Gaussian elimination. First, the augmented matrix $[  A|{ \bf b} ]$ can be constructed, and then row operations can be used to put the matrix into upper triangular (or echelon) form. It is then possible to solve each component of ${\bf x}$ using back substitution starting from the bottom row.
+
+This system has a unique solution if and only if $\text{det}( A)$ is non-zero. If $\text{det}( A)=0$, then there are either no solutions or infinitely many. In particular, if $\text{Rank}( A) < \text{Rank}( [A|{\bf b}])$ there is no solution. If $\text{Rank}( A) = \text{Rank}([ A|{\bf b}])$ there is an infinite family of solutions.
+
+{\em Eigenvectors} are special vectors, ${\bf v}$, whose direction does not change under matrix multiplication. That is
+\[ 
+ A {\bf v} = \lambda {\bf v}
+\]
+for scalar $\lambda$. This $\lambda$ is the corresponding stretch factor, called the {\em eigenvalue}.

@@ -3,6 +3,7 @@ WORKSHEETS =\
 			sets_of_solutions.pdf\
 			linear_systems.pdf\
 			worksheet_4.pdf\
+			eigenvalues_and_eigenvectors.pdf\
 			#
 
 FIGURES =\
