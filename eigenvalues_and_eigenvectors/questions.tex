@@ -130,8 +130,8 @@ Consider the homogeneous linear system ${\bf A}{\bf x}= {\bf 0}$:
     corresponding value of $\lambda$ which is known as the \emph{eigenvalue}
     for that eigenevector.
 
-    Starting from this definition we want an
-    \emph{eigenvalue problem} is to find the eigenvectors from knowing the
+    Starting from this definition an
+    \emph{eigenvalue problem} is to find the eigenvectors for a known
     matrix ${\bf A}$. This problem is different from~\eqref{lin}
     or~\eqref{eq:homo} since although the left-hand side (lhs) is similar in this
     case we also have our unknown vector ${\bf v}$ on the right-hand side
@@ -244,6 +244,9 @@ Consider the homogeneous linear system ${\bf A}{\bf x}= {\bf 0}$:
             for three different real (or complex) numbers $a_1$, $a_2$ and
             $a_3$ what will be the eigenvectors and eigenvalues of this
             matrix?
+
+            Considering the action of a matrix on a vector as a geometric
+            transformation what do the eigenvalues represent?
         \item What will be the eigenvectors/eigenvalues of a $1 \times 1$ matrix
             \[
                 \begin{pmatrix}
@@ -251,6 +254,14 @@ Consider the homogeneous linear system ${\bf A}{\bf x}= {\bf 0}$:
                 \end{pmatrix}
             \]
             for some real (or complex) number $a$?
+        \item We can define a 2D rotation matrix as
+            \[
+                \begin{pmatrix}
+                    \cos{\theta} & \sin{\theta} \\
+                    -\sin{\theta} & \cos{\theta}
+                \end{pmatrix}.
+            \]
+            What are the eigenvectors and eigenvalues of this matrix?
         \item One result which is very useful in understanding the
             relationship between a matrix and its eigenvectors and eigenvalues
             is that we can often \emph{diagonalise} a matrix writing it as a
@@ -282,5 +293,13 @@ Consider the homogeneous linear system ${\bf A}{\bf x}= {\bf 0}$:
             \]
             Verify that the matrix ${\bf C}$ defined above is diagonalisable
             by computing this matrix product.
+        \item Verify by direct calculation that the matrix ${\bf O}$ of
+            eigenvectors of ${\bf C}$ satisfies
+            \[
+                {\bf O}^T {\bf O} = {\bf I}
+            \]
+            (i.e. that its inverse is its transpose). Hence compute ${\bf
+            C^2}$, ${\bf C^3}$, and ${\bf C^n}$ using the diagonalisation of
+            ${\bf C}$.
     \end{enumerate}
 }
