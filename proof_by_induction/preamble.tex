@@ -1,0 +1,19 @@
+Proof by induction is a form of direct proof that is very widely used. It is a mathematical proof technique that allows us to prove that a given statement holds for all the natural numbers greater than some initial value.
+
+More precisely suppose we have a statement, denoted $P(n)$, that we wish to prove is true for all values of $n \in \mathbb{N}$. Here $\mathbb{N}=\left\{1,2,3\dots\right\}$ denotes the set of natural numbers, using the definition that excludes zero. Now for instance we might want to show
+\begin{equation} \label{eq:ex1}
+ P(n):=\quad 1+2+3+\dots+n=\frac{n(n+1)}{2}\quad\forall ~n\in\mathbb{N}.
+\end{equation}
+The technique of proof by induction allows us to prove this. The proof is comprised of the following two steps:
+\begin{enumerate}
+ \item {\bf Base Step:} Demonstrate that $P(n)$ is true for the for the initial value of $n \in \mathbb{N}$. 
+ \item {\bf Inductive Step:} Show that $P(n) \implies P(n+1)$ for some $n \in \mathbb{N}$.
+\end{enumerate}
+
+Note that the value of $n$ chosen for the Base Step will depend on which values of $n$ we are trying to prove the statement $P(n)$ is true for. Often we will be proving that the statement $P(n)$ is true for all the natural numbers, in which case the initial value will be $n=1$. However, sometimes we may wish to prove a statement holds true for all natural numbers greater than a certain value that is larger than 1. In this case, it is still possible to use induction but our initial value used in the Base Step will be different.
+
+For the Inductive Step, we are showing that the {\em implication} $P(n) \implies P(n+1)$ is true. To do this, we need to show $P(n+1)$ cannot be false when $P(n)$ is true. Therefore in this step we first assume $P(n)$ is true. Here, $P(n)$ is the {\em inductive hypothesis} or assumption. Then to complete the Inductive Step we use $P(n)$ to show $P(n+1)$. This demonstrates that if $P(n)$ is assumed to be true, then $P(n+1)$ is also true. 
+
+With both these steps, the proof is complete. The Base Step shows that $P(1)$ is true. From the Inductive Step we know that $P(n)\implies P(n+1)$. Therefore $P(1)\implies P(2)$, so $P(2)$ is also true. Now from the inductive step again, $P(2)\implies P(3)$ and so $P(3)$ is true. This process can be repeated ad infinitum. So $P(n)$ is true for all $n \in \mathbb{N}$ by induction.
+
+Note that in the Inductive Step we are not assuming that $P(n)$ is true {\em for all} $n\in \mathbb{N}$, but just for a given $n$. There is a variant of induction, called {\em strong induction}, where for the Inductive Step we assume that $P(n)$ holds for all values of $n$ up to and including $n$.

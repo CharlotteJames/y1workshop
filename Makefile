@@ -4,6 +4,7 @@ WORKSHEETS =\
 			linear_systems.pdf\
 			worksheet_4.pdf\
 			eigenvalues_and_eigenvectors.pdf\
+			proof_by_induction.pdf\
 			#
 
 FIGURES =\
