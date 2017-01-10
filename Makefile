@@ -5,6 +5,7 @@ WORKSHEETS =\
 			worksheet_4.pdf\
 			eigenvalues_and_eigenvectors.pdf\
 			proof_by_induction.pdf\
+			trusses.pdf\
 			#
 
 FIGURES =\
@@ -20,7 +21,22 @@ FIGURES =\
 		 worksheet_4/fig_2.pdf\
 		 worksheet_4/fig_3.pdf\
 		 worksheet_4/fig_4.pdf\
-		 worksheet_4/fig_5.pdf\
+		 trusses/fixed.pdf\
+		 trusses/pin.pdf\
+		 trusses/roller.pdf\
+		 trusses/mj_1.pdf\
+		 trusses/mj_2.pdf\
+		 trusses/mj_3.pdf\
+		 trusses/mj_4.pdf\
+		 trusses/mj_5.pdf\
+		 trusses/ms_1.pdf\
+		 trusses/ms_2.pdf\
+		 trusses/ms_3.pdf\
+		 trusses/ms_4.pdf\
+		 trusses/roof.pdf\
+		 trusses/howe.pdf\
+		 trusses/pratt.pdf\
+		 trusses/bridge.pdf\
 		 #
 
 all: $(WORKSHEETS)
