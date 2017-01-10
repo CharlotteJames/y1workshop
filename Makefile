@@ -21,6 +21,7 @@ FIGURES =\
 		 worksheet_4/fig_2.pdf\
 		 worksheet_4/fig_3.pdf\
 		 worksheet_4/fig_4.pdf\
+		 worksheet_4/fig_5.pdf\
 		 trusses/fixed.pdf\
 		 trusses/pin.pdf\
 		 trusses/roller.pdf\
