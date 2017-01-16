@@ -2,5 +2,6 @@
 *.pdf
 *.aux
 *.log
+*.backup
 tmp/*
 *~

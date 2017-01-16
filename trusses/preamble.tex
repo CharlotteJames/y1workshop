@@ -1,0 +1,39 @@
+{\em Trusses} are strong structures made of thin, light rods (or members) which individually have very little bending stiffness. They are often used to form roofs and bridges.
+
+When modelling trusses the typical idealised set-up is that the connecting rods have no weight and no bending stiffness at all. Therefore:
+\begin{itemize}
+ \item Each rod is either in compression or tension only.
+ \item Each joint is subject to forces from the rods (internal) and external loads, but no external moments.
+\end{itemize}
+
+Let $m$ be the number of rods and $n$ be the number of joints. Each rod in the truss introduces an extra degree of freedom --- its internal load that is either in compression or tension. Therefore there are $m$ unknowns. Using Newton's 1st law (N1L), for each joint we obtain two constraints from the horizontal and vertical force balance. Therefore we have $2n$ constraints in total from the joints. However, we also know that the {\em sum} of all horizontal and vertical forces must balance, and the {\em sum} of all moments of external forces about any point must balance. This means that there are 3 ``surplus'' equations from force balances at the joints and so there are actually just $2n-3$ constraints. Then if
+\[
+ m=2n-3
+\]
+the number of constraints is equal to the number of unknowns, and the forces can be fully determined. In this case the truss is called {\em simple} (or statically determinate). If $m<2n-3$ then the system becomes overdetermined and is {\em unstable}. Therefore the condition
+\[
+ m\geq 2n-3
+\]
+is a necessary condition for the truss to be {\em stable}.
+
+Two common types of joint (or support) are:
+\begin{itemize}
+ \item \includegraphics[scale=2]{pin.pdf} Pin joint: Allows rotation but not translation. Cannot transmit moments.
+ \item \includegraphics[scale=2]{roller.pdf} Roller joint: Allows translation in one direction.
+\end{itemize}
+
+There are a number of different methods to solve for the forces in a truss structure. 
+
+{\bf Method of Joints}
+\begin{enumerate}
+ \item Consider the equilibrium of the truss as a whole. Draw a ``Free Body Diagram'' (FBD) for the whole truss. By taking horizontal and vertical force balances and a moment balance around some point determine the reaction forces at the supports.
+ \item Now the external forces have been found, work through the truss joint by joint. For each joint, draw a FBD and use N1L to solve for the tensions in the rods at that point. From applying N1L at each joint we obtain two equations. Therefore it is easiest to work through the truss in an order such that at each joint there are at most two unknown tensions. Note that there is no moment balance, because all the forces on a joint are considered to act at that joint only.
+\end{enumerate}
+
+{\bf Method of Sections}
+\begin{enumerate}
+ \item Consider the equilibrium of the truss as a whole (as in the first step for the Method of Joints).
+ \item Choose a place to ``cut'' the truss into two sections. Then replace the cut rods with forces equivalent to the internal load transmitted to the rods. By considering the equilibrium of a section, it is then possible tp solve for the desired unknown forces.
+\end{enumerate}
+
+Now for some questions\dots
