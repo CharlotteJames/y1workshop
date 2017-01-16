@@ -7,6 +7,8 @@ WORKSHEETS =\
 			proof_by_induction.pdf\
 			trusses.pdf\
 			groups.pdf\
+			probability.pdf\
+			dynamics.pdf\
 			#
 
 FIGURES =\
