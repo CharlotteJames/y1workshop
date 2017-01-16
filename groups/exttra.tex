@@ -1,0 +1,33 @@
+The property of associativity can be tricky to prove. To make things a bit simpler, throughout this worksheet we will assume that real addition $+$ is associative and commutative. Precisely that 
+\begin{align}\label{aasoc}
+ x + (y+ z) &= (x + y) + z \\
+ x+y&=y+x \label{acom}
+\end{align}
+for $x,y,z\:\in \mathbb{R}$.
+We also assume that real multiplication is associative and commutative, explicitly that 
+\begin{align}\label{masoc}
+ x (yz)=(xy)z \\
+ xy=yz \label{mcom}
+\end{align}
+for $x,y,z\:\in \mathbb{R}$. 
+Lastly we shall assume that real multiplication distributes over addition - that
+\begin{equation}\label{mdist}
+ x  (y+z)=(xy)+(xz).
+\end{equation}
+Note that real multiplication is represented simply by juxtaposition (we have already used the $*$ symbol for complex multiplication!).
+
+To prove the associativity of $*$ on $G$, we can first prove the associativity of complex multiplication using our assumptions about real multiplication. The associativity of $*$ in $G$ will then be inherited from the associativity of complex multiplication that we have proved in general. Let $z_{1}=x_{1}+j\,y_{1}$, $z_{2}=x_{2}+j\,y_{2}$ and $z_{3}=x_{3}+j\,y_{3}$, where $x_{1},x_{2},y_{1},y_{2},z_{1},z_{2}\:\in \mathbb{R}$. Then
+\begin{align*}
+ &z_{1}*(z_{2}*z_{3})\\
+ &\hspace{5pt}=(x_{1}+j\,y_{1})*\left((x_{2}+j\,y_{2})*(x_{3}+j\,y_{3})\right)\\
+ &\hspace{5pt}=(x_{1}+j\,y_{1})*(x_{2}x_{3}-y_{2}y_{3}+j\,(x_{2}y_{3}+y_{2}x_{3}))\\
+ &\hspace{5pt}=x_{1}(x_{2}x_{3}-y_{2}y_{3})-y_{1}(x_{2}y_{3}+y_{2}x_{3})+j\,(y_{1}(x_{2}x_{3}-y_{2}y_{3})+x_{1}(x_{2}y_{3}+y_{2}x_{3}))\\
+ &\hspace{5pt}=x_{1}x_{2}x_{3}-x_{1}y_{2}y_{3}-y_{1}x_{2}y_{3}-y_{1}y_{2}x_{3}+j\,(y_{1}x_{2}x_{3}-y_{1}y_{2}y_{3}+x_{1}x_{2}y_{3}+x_{1}y_{2}x_{3}) \hspace{10pt} \text{by \eqref{mdist}} \\
+ &\hspace{5pt}=(x_{1}x_{2}x_{3}-y_{1}y_{2}x_{3})-(x_{1}y_{2}y_{3}+y_{1}x_{2}y_{3})+j\,((x_{1}x_{2}y_{3}-y_{1}y_{2}y_{3})+(y_{1}x_{2}x_{3}+x_{1}y_{2}x_{3})) \hspace{10pt} \text{by \eqref{acom} and \eqref{mcom}} \\
+ &\hspace{5pt}=(x_{1}x_{2}-y_{1}y_{2})x_{3}-(x_{1}y_{2}+y_{1}x_{2})y_{3}+j\,((x_{1}x_{2}-y_{1}y_{2})y_{3}+(x_{1}y_{2}+y_{1}x_{2})x_{3})\hspace{10pt} \text{by \eqref{mdist}}\\
+ &\hspace{5pt}=(x_{1}x_{2}-y_{1}y_{2}+j\,(x_{1}y_{2}+y_{1}x_{2})*(x_{3}+j\,y_{3})\\
+ &\hspace{5pt}=((x_{1}+j\,y_{1})*(x_{2}+j\,y_{2}))*(x_{3}+j\,y_{3})\\
+ &\hspace{5pt}=(z_{1}*z_{2})*z_{3}.
+ \end{align*}
+
+This proof is beyond what you will be expected to do in this worksheet. The important thing to note is that we are using the given properties of real addition and multiplication to prove that complex multiplication is associative.
