@@ -1,1 +1,74 @@
-Background
+This worksheet introduces some of the fundamental concepts in probability. Before formally defining the notion of probability, let us first recap some basic terminology that has been covered in lectures.\\
+
+\subsubsection*{Recap of terminology}
+\begin{itemize}
+ \item A {\em random trial} is a process by which we observe something uncertain.
+ \item An {\em outcome} is the result of a single trial.
+ \item The {\em sample space}, denoted $S$, is the set of all possible outcomes of a random trial.
+ \item An {\em event} is a subset of the sample space $S$.
+\end{itemize}
+Now let us examine a couple of classic examples to make all this a bit clearer.\\
+
+{\bf Example 1: Tossing a coin}\\
+Consider the random trial of tossing a coin. The possible outcomes from tossing a coin are clearly either heads $ H$ or tails $ T $. Therefore the sample space, which is the set of all possible outcomes, is given by $S=\left\{H,T\right\}$. An event can be any subset of $S$. This means that all the possible events are $\left\{  \right\}=\emptyset$, $\left\{ H \right\}$, $\left\{ T \right\}$ or $\left\{ H,T \right\}=S$. \\
+
+{\bf  Example 2: Rolling a dice}\\
+The possible outcomes from rolling a dice are $1$, $2$, $3$, $4$, $5$ and $6$. This means that the sample space $S=\left\{1,2,3,4,5,6\right\}$. In this example there are lots of different possible events, such as rolling a number greater than four $\left\{ 5,6 \right\}$ or rolling an odd number $\left\{ 1,3,5 \right\}$.
+
+\subsubsection*{Probability}
+Probabilities are defined over events, not outcomes, with the {\em probability} of an event being a number between 0 and 1 inclusive. A probability of 0 means that the event is impossible, whilst a probability of 1 means that the event is certain. More formally we can define a {\em probability measure} which is a function $P:2^{S}\to[0,1]$ that satisfies the following two properties:
+\begin{enumerate}
+ \item $P(S)=1$.
+ \item If $A\cap B = \emptyset$ then $P(A\cup B)=P(A)+P(B)$ (addition rule).
+\end{enumerate}
+Note that here $2^{S}$ denotes the power set of $S$, which is the set of all subsets of $S$. This means that $2^{S}$ is really the set of all possible events for a given sample space $S$.
+
+The { \em complement} of an event $A$, denoted $A^{c}$, is the set of the elements of the sample space that are not within $A$. $A^{c}$ is the event that event $A$ does not occur.\\
+
+{\bf Two quick warmup proofs}\\
+Let's use the two axioms of a probability measure defined earlier to prove some properties of the probability measure. These might seem intuitively obvious but it's good to see how so much can be proved from just our two assumptions.
+\begin{enumerate}
+ \item Prove that $P(\emptyset)=0$ i.e. the probability of the empty event is zero.
+ \item Prove that $P(A^{c})=1-P(A)$.
+\end{enumerate}
+
+\subsubsection*{Conditional probability}
+
+The {\em conditional probability} of $A$ given $B$ is
+\begin{equation*}
+ P(A|B)=\frac{P(A\cap B)}{P(B)} \hspace{10pt} \text{where} \hspace{10pt} P(B)\neq 0.
+\end{equation*}
+The events $A$ and $B$ are {\em independent} if the probability of $A$ is not affected by the occurrence of $B$ and vice-versa.
+
+{\em Bayes' Rule} is given by
+\begin{equation*}
+ P(A|B)=\frac{P(B|A)P(A)}{P(B)}.
+\end{equation*}
+
+When actually solving problems using Bayes' Rule, you will often not be given $P(B)$ directly. Instead you can find $P(B)$ by using the result
+\begin{equation}\label{eq:pb}
+P(B)= \sum_{n=1}^{N}P(B|A_{n})P(A_{n})
+\end{equation}
+where $\cup_{n=1}^{N}A_{n}=S$ (one of the $A_n$ events must always occur) and $A_{n} \cap A_{m}=\emptyset$ for $n\neq m$ (the $A_{n}$'s cannot occur together). Let us consider an example to make this clearer.
+
+\subsubsection*{Example}
+Imagine there are two boxes with balls in them. Box 1 has 1 white ball and 99 red balls. Box 2 has 1 red ball and 49 white balls. First one of the boxes is chosen at random, with equal probability. Then a ball is picked at random from the chosen box.
+
+\begin{enumerate}
+ \item What is the sample space $S$?\\
+ The sample space is $S=\left\{ 1R, 1W, 2R, 2W \right\}$, where $1R$ means a red ball was chosen from Box 1 for instance.
+ \item What is the probability that the ball is red?\\
+ Now because exactly one box always has to be chosen we can use the rule \eqref{eq:pb}. Therefore 
+ \begin{equation*}
+  P(R)=P(R|1)P(1)+P(R|2)P(2)=\frac{99}{100}\frac{1}{2}+\frac{1}{50}\frac{1}{2}=50.5\%.
+ \end{equation*}
+ Here the $A_n$ events (that must always occur but cannot occur together) are just choosing Box 1 or choosing Box 2. In particular $A_{1}=1$ (choosing Box 1) and $A_{2}=2$ (choosing Box 2).
+ \item If the ball is red, what is the probability that it came from Box 1?\\
+ Now we can just apply Bayes' Rule.
+ \begin{equation*}
+  P(1|R)=\frac{P(R|1)P(1)}{P(R)}=\frac{\frac{99}{100}\frac{1}{2}}{0.505}=98.02\%.
+ \end{equation*}
+\end{enumerate}
+
+Now that all the basic concepts have been explained, let's do some questions...
+
