@@ -2,10 +2,13 @@ WORKSHEETS =\
 			complex_algebra.pdf\
 			sets_of_solutions.pdf\
 			linear_systems.pdf\
-			worksheet_4.pdf\
+			statics.pdf\
 			eigenvalues_and_eigenvectors.pdf\
 			proof_by_induction.pdf\
 			trusses.pdf\
+			groups.pdf\
+			probability.pdf\
+			dynamics.pdf\
 			#
 
 FIGURES =\
@@ -17,11 +20,11 @@ FIGURES =\
 		 linear_systems/supports2.pdf\
 		 linear_systems/supports3.pdf\
 		 linear_systems/moments.pdf\
-		 worksheet_4/fig_1.pdf\
-		 worksheet_4/fig_2.pdf\
-		 worksheet_4/fig_3.pdf\
-		 worksheet_4/fig_4.pdf\
-		 worksheet_4/fig_5.pdf\
+		 statics/fig_1.pdf\
+		 statics/fig_2.pdf\
+		 statics/fig_3.pdf\
+		 statics/fig_4.pdf\
+		 statics/fig_5.pdf\
 		 trusses/fixed.pdf\
 		 trusses/pin.pdf\
 		 trusses/roller.pdf\
@@ -38,6 +41,9 @@ FIGURES =\
 		 trusses/howe.pdf\
 		 trusses/pratt.pdf\
 		 trusses/bridge.pdf\
+		 groups/triangle.pdf\
+		 groups/square.pdf\
+		 groups/rectangle.pdf\
 		 #
 
 all: $(WORKSHEETS)

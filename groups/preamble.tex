@@ -1,0 +1,87 @@
+In this worksheet we will be looking at groups and their properties. In order to do so it is first necessary to recall some terminology.
+\subsubsection*{Recap}
+\begin{itemize}
+ \item[--] A {\em set} is an unordered collection of distinct elements. An element $x$ of a set $A$ is denoted $x \in A$. \newline For example: $A=\left\{ 5, 3,7 \right\}$, $A=\mathbb{R}$.
+ \item[--] A {\em binary operation} on sets $A$ is a function $f:\:A \times A \to A$. It is usually denoted $f=x\bullet y$. \newline For example: $f=x+y$, $f=x\times y$. \newline
+ A binary operation over a set $A$ is {\em commutative} if $x \bullet y = y \bullet x ~~\forall \: x,y \in A$. 
+\end{itemize}
+
+\subsubsection*{What is a group?}
+Now let us define what a group is. A {\em group}, denoted $(G,\bullet)$, is a set $G$ with binary operation $\bullet$ which satisfies the following properties:
+\begin{enumerate}
+ \item Closure: if $x,y\in G$ then $x\bullet y \in G$.
+ \item Associativity:  $x \bullet (y \bullet z)=(x\bullet y)\bullet z$, $\forall \: x,y,z \in G$.
+ \item Identity: $\exists e\in G$ such that $x \bullet e = e \bullet x = x$, $\forall \: x \in G$. $e$ is the identity element.
+ \item Inverse: $\forall \: x\in G$ there is a corresponding element $x^{-1}\in G$ such that $x \bullet x^{-1}=x^{-1} \bullet x=e$. $x^{-1}$ is the inverse of $x$.
+\end{enumerate}
+
+If $H$ is a non-empty subset of $G$ and $(H,\bullet)$ is a group, then $H$ is a {\em subgroup} of $G$. 
+An {\em Abelian group} is a group with a commutative binary operation $\bullet$.
+
+In practice, associativity can be quite tricky to prove. Therefore, for the purposes of this worksheet we will just use the results that addition ($+$) and multiplication ($*$) are associative over $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$ and $\mathbb{C}$. Note that subtraction ($-$) is not associative because
+\begin{equation*}
+ (a-b)-c=a-b-c\neq a-b+c = a-(b-c).
+\end{equation*}
+Also, we are given the fact that matrix multiplication is associative.\\
+
+{\bf Warm-up exercise}: Check that the associativity property holds for the set of matrices $\left\{{\bf A},{\bf B},{\bf C}\right\}$ where
+\begin{equation*}
+ {\bf A}=\begin{pmatrix}
+  1 & 3 \\
+  4 & 2
+ \end{pmatrix}, \hspace{10pt}
+  {\bf B}=\begin{pmatrix}
+  2 & 4 \\
+  1 & 1
+ \end{pmatrix}
+ , \hspace{10pt}
+  {\bf C}=\begin{pmatrix}
+  2 & 1 \\
+  3 & 5
+ \end{pmatrix}.
+\end{equation*}
+
+\subsubsection*{Example 1}
+To make all this more clear let us look at an example. Take the set $G=\left\{ 1,j,-1,-j \right\}$ (where $j=\sqrt{-1}$) and the binary operation of complex multiplication $*$. Is $(G,*)$ a group? Let us consider closure first. To find out whether we have closure, we must consider what happens when we apply the binary operation between every pair of elements in the group --- is the result still an element of the group? 
+
+As $G$ is a finite set, a convenient way to represent the action of the binary operation is in a table. In particular, the table for $*$ acting on $G$ is given by
+\begin{center}
+\begin{tabular}{c|cccc}
+$*$ & $1$ & $j$ & $-1$ & $-j$  \\ \hline
+$1$ & $1$ & $j$ & $-1$ & $-j$  \\
+$j$ & $j$ & $-1$ & $-j$ & $1$ \\
+$-1$ & $-1$ & $-j$ & $1$ & $j$ \\
+$-j$ & $-j$ & $1$ & $j$ & $-1$ 
+\end{tabular}.
+\end{center}
+From looking at the table it is clear that $(G,*)$ satisfies closure, because no element appears from applying the binary operation that is not in the set $G$. 
+
+ $(G,*)$ has an identity element which is $1$, because if you consider the binary operation of $*$ between $1$ and any element $x$ in $G$ the product is just $x$. From the table we can also see that every element in $G$ also has an inverse. In particular, $j$ and $-j$ are inverses of one another and $1$ and $-1$ are their own inverses.
+
+Now is $G$ an Abelian group? As the table is symmetric about the diagonal, $*$ is commutative. Therefore $(G,*)$ is Abelian.\\
+
+\subsubsection*{Example 2}
+Let's now go through another example of checking whether a set and binary operation are a group. This time, we will consider $(\mathbb{Q} - \left\{ 0 \right\},*)$. Here the binary operation $*$ is multiplication, and $\mathbb{Q} - \left\{ 0 \right\}$ is the set the rational numbers without zero. First, note that a number in our set $\mathbb{Q} - \left\{ 0 \right\}$ can be written
+\begin{equation*}
+ q=\frac{x}{y}\in \mathbb{Q} - \left\{ 0 \right\}
+\end{equation*}
+where $x,y\:\in\mathbb{Z}- \left\{ 0 \right\}$. We have closure, because if $x_{1},x_{2},y_{1},y_{2}\: \in \mathbb{Z} - \left\{ 0 \right\}$ then $x_{1}x_{2},  y_{1}y_{2}\: \in \mathbb{Z} - \left\{ 0 \right\}$ which means that
+\begin{equation*}
+ \frac{x_{1}}{y_{1}}*\frac{x_{2}}{y_{2}}=\frac{x_{1}x_{2}}{y_{1}y_{2}} \in \mathbb{Q}- \left\{ 0 \right\}.
+\end{equation*}
+The identity element is $1$ because
+\begin{equation*}
+ 1*q=q*1=q~~\forall \: q=\frac{x}{y}\in \mathbb{Q}- \left\{ 0 \right\}
+\end{equation*}
+and every element $q=\frac{x}{y}$ has an unique inverse 
+\begin{equation*}
+ q^{-1}=\frac{y}{x}\:\in\mathbb{Q}- \left\{ 0 \right\}\hspace{10pt}\text{such that}\hspace{10pt}\frac{x}{y}*\frac{y}{x}=\frac{y}{x}*\frac{x}{y}=\frac{xy}{xy}=1 ~~\forall \: x,y \in \mathbb{Z}- \left\{ 0 \right\}.
+\end{equation*}
+We have already assumed associativity. Therefore, as all the properties for a group hold, $(\mathbb{Q} - \left\{ 0 \right\},*)$ is a group.
+
+In addition, $(\mathbb{Q} - \left\{ 0 \right\},*)$ is an Abelian group because
+\begin{equation*}
+ \frac{x_{1}}{y_{1}}*\frac{x_{2}}{y_{2}}=\frac{x_{1}x_{2}}{y_{1}y_{2}}=\frac{x_{2}x_{1}}{y_{2}y_{1}}=\frac{x_{2}}{y_{2}}*\frac{x_{1}}{y_{1}}.
+\end{equation*}
+
+Now for some questions...

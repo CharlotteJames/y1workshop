@@ -1,0 +1,170 @@
+\multiproblem{sample_spaces}{Let us first consider some straightforward examples to make it clear what the terms like sample space and event mean.
+\begin{enumerate}
+ \item An engineering firm is hired to determine if certain waterways in the UK are safe for fishing. Samples are taken from three rivers.
+ \begin{enumerate}
+  \item List the elements of a sample space $S$, using the letters $F$ for safe to fish and $N$ for not safe to fish.
+  \item List the elements of $S$ corresponding to event $A$ that at least two of the rivers are safe for fishing.
+  \item Define an event that has as its elements $\left \{ FFF, NFF, FFN, NFN \right \}$.
+ \end{enumerate}
+ 
+\item It is common in many industrial areas to use a filling machine to fill boxes full of product. This occurs in the food industry for example. These machines are not perfect and can $A$, fill to specification, $B$, underfill, and $C$, overfill. Generally, the practice of underfilling is the least wanted. Let $P(B)=0.001$ and $P(A)=0.990$.
+\begin{enumerate}
+ \item What is the sample space $S$? Find $P(C)$.
+ \item What is the probability that the machine does not underfill?
+ \item What is the probability that the machine either overfills or underfills?
+\end{enumerate}
+
+ \item Suppose our random trial is to toss a fair coin and throw a fair dice at the same time.
+ \begin{enumerate}
+  \item What is the sample space $S$?
+  \item Let $A$ be the event that the coin is heads and the dice is an odd number. Let $B$ be be the event that the coin is heads and the number of the dice is greater than 4. What are $A\cap B$ and $A \cup B$? By calculating the probabilities show that $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.
+ \end{enumerate}
+ 
+ \item Consider the random trial of flipping a fair coin three times.
+ \begin{enumerate}
+ \item What is the probability of getting at least two heads?
+ \item Now imagine the coin is biased so heads are three times more likely than tails. What is the probability of getting at least two heads now?
+ \end{enumerate}
+ 
+\item When rolling two fair dice together, what is the probability of not obtaining a double?
+
+\item Two dice are rolled together and the total score is added up. What is the probability that the total score is at least 5? What if three dice are rolled together?
+\end{enumerate}
+}
+
+\multiproblem{2}{Let us prove some results about conditional probabilities. 
+\begin{enumerate}
+ \item If $A$ and $B$ are independent, then what are $P(A|B)$ and $P(B|A)$? Prove that $P(A\cap B)=P(A)P(B)$.
+ \item Prove Bayes' Rule from the definitions of the conditional probabilities of $P(A|B)$ and $P(B|A)$.
+ \item In practice, it is often useful to use Bayes' Rule in the form below:
+ \begin{equation}\label{eq:bay}
+ P(A|B)=\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|A^{c})P(A^{c})}.
+ \end{equation}
+ Here the $P(B)$ in the denominator in the normal version of the rule has been rewritten. Let us demonstrate where this result comes from, assuming the defining properties of a probability measure $P$ given in the preamble.
+ \begin{enumerate}
+  \item First, use a Venn diagram to show that $(B\cap A)\cup (B\cap A^{c})=B$.
+  \item Hence show that $P(B)=P(B\cap A) +P(B \cap A^{c})$.
+  \item Finally use the definition of conditional probability to show that $P(B)=P(B|A)P(A)+P(B|A^{c})P(A^{c})$.
+ \end{enumerate}
+ \item Consider two events $A$ and $B$, where $A\subseteq B$.
+     \begin{enumerate}
+     \item What is $A\cap B$? Show that $B=A\cup (A^{c} \cap B)$ using a Venn diagram.
+     \item Hence prove that $P(A)\leq P(B)$ using the probability axioms in the preamble. What is the condition for $P(A)=P(B)$?
+     \item Consider the random trial of throwing a fair dice. Let $A=\left\{1,3 \right \}$ and $B$ be throwing an odd number. Is $A\subseteq B$?  What is $A^{c}\cap B$? By finding the elements of the sets demonstrate that the result you just showed using the Venn diagram holds true for this example - that $B=A\cup (A^{c} \cap B)$.
+     \item Show that for the dice example $P(A)\leq P(B)$ by finding $P(A)$ and $P(B)$. Now what is $P(A^{c}\cap B)$? Verify that $P(A)=P(B)-P(A^{c}\cap B)$. 
+     \end{enumerate}
+     \end{enumerate}
+}
+
+\multiproblem{conditional}{Now for some probability questions on independence and conditional probabilities.
+\begin{enumerate}
+ \item A town has two fire engines operating independently. The probability that a specific fire engine is available when needed is 0.96.
+ \begin{enumerate}
+  \item What is the probability that neither is available when needed?
+  \item What is the probability that a fire engine is available when needed?
+ \end{enumerate}
+ 
+ \item During the repair of 200 car engines, it was found that the spark plug was changed in 72 engines, the sump in 84, and both parts in 60
+ \begin{enumerate}
+  \item Let $A$ be the changing of the spark plug and $B$ be the changing of the sump. Are $A$ and $B$ independent?
+  \item Given that the spark plug has been changed in an engine, what is the probability that the sump will also need to be changed?
+ \end{enumerate}
+ 
+ \item A group of 2000 randomly selected adults were asked if they are in favour of cloning or not. Does it appear that the events ``female'' and ``no opinion'' are independent?
+  \begin{center}
+ \begin{tabular}{|c|c|c|c|}
+ \hline
+   & In favour & Against & No opinion \\ \hline
+Male  & 395 & 405 & 100 \\ \hline
+ Female & 300 & 680 & 120 \\ \hline
+ \end{tabular}
+\end{center}
+ 
+ \item Consider a sample space $S=\left\{ a,b,c,d,e,f \right\}$. We know the probabilities of the following events:
+\begin{equation*}
+ P(a)=0.05\hspace{5pt}P(b)=0.1\hspace{5pt}P(c)=0.05\hspace{5pt}P(d)=0.1\hspace{5pt}P(e)=0.3\hspace{5pt}P(f)=0.4.
+\end{equation*}
+Consider the events $X=\left\{a,b,c \right\}$, $Y=\left\{ b,d,e\right \}$ and $Z=\left\{b,e,f \right\}$. Find the following probabilities:
+\begin{enumerate}
+ \item $P(X\cap Y)$
+ \item $P(X|Z)$
+ \item $P(X|(X\cap Z))$
+ \item $P((X\cap Y)|Z)$.
+ \end{enumerate}
+ 
+\end{enumerate}
+ }
+
+\multiproblem{bayes}{Let us now consider a few problems that require application of Bayes' Rule. If you're confident with using it, choose two or three to practice and move on to the next question.
+\begin{enumerate}
+ \item First consider again the ball example problem at the end of the preamble. If the ball chosen is white, what is the probability that it came from Box 2?
+ 
+ \item You go to the doctors' for some health reason. Whilst there having a chat the doctor mentions that there is a particularly nasty form of swine flu that affects 1 in 50,000 people, and there is a test for it that you should take. If a patient has the condition, then the test has a 99\% chance of being positive. If the patient doesn't have the condition, the test has a 99\% chance of being negative. (Hint: Easiest to just use the form of Bayes' Rule that you have proved, given in \eqref{eq:bay}).
+ \begin{enumerate}
+ \item What is the sample space $S$?
+ \item What is the probability of your test being negative? If the test is negative, what is the probability of not having the condition?
+ \item What is the probability of your test being positive?  If the test is positive, what is the probability of having the condition? 
+ \item Now imagine this all happened in some country where 1 in 500 people had swine flu? What is the probability of having the condition if the test is positive now?
+ \end{enumerate}
+ 
+ \item A regional telephone company operates three identical relay stations at different locations. During a one-year period, the number of malfunctions reported by each station and the causes are shown below. 
+  \begin{center}
+ \begin{tabular}{|c|c|c|c|}
+ \hline
+  Malfunction type & Station A & Station B & Station C\\ \hline
+  Problems with electricity supplied & 2 & 1 & 1 \\ \hline
+  Computer malfunction & 4 & 3 & 2 \\ \hline
+  Malfunctioning electronic equipment & 5 & 4 & 2 \\ \hline
+  Caused by other human errors & 7 & 7 & 5 \\ \hline
+ \end{tabular}
+\end{center}
+  Suppose that a malfunction was reported and it was found to be caused by other human errors. What is the probability that it came from station $C$?
+  
+  \item There are three boxes of light bulbs. Box 1 contains 3000 bulbs, of which 5\% are broken. Box 2 contains 1000 bulbs, of which 3\% are broken. Box 3 contains 2500 bulbs of which 2\% are broken. One of the boxes is selected at random with equal probability and one component is removed.
+  \begin{enumerate}
+  \item What is the sample space $S$?
+  \item What is the probability that the removed bulb is defective? (Hint: use equation \eqref{eq:pb})
+  \item If a component is defective, what is the probability that it came from Box 1? What is the probability it came from Box 2?
+  \end{enumerate}
+  
+ \item 10,000 emails were collected, of which 8,000 were spam and 2,000 were not spam. The presence of three words different words, $w_{1}$, $w_{2}$ and $w_{3}$, in each email was recorded. We assume that each of the words occur independently to make things easier. The results are given in the table below. \\
+ \begin{center}
+ \begin{tabular}{|c|c|c|}
+ \hline
+  Word & Spam emails containing word & Non-spam emails containing word\\ \hline
+  $w_{1}$ & 5000 & 200 \\ \hline
+  $w_{2}$ & 2000 & 1500 \\ \hline
+  $w_{3}$ & 3000 & 400 \\ \hline
+ \end{tabular}
+\end{center}
+\begin{enumerate}
+\item If an email contains all three words, what is the probability it is spam? What is the probability it is non-spam? Is it more likely to be spam or non-spam?
+\item If an email contains words $w_{1}$ and $w_{2}$, but not $w_{3}$ is it more likely to be spam or non-spam? What about if it contains $w_{1}$ and $w_{3}$ but not $w_{2}$?
+\end{enumerate}
+\end{enumerate}
+}
+
+\multiproblem{proofs}{Let us prove some more properties of the probability measure $P$. You may assume the two defining properties of a probability measure given in the preamble.
+\begin{enumerate}
+\item Assuming that $A$ and $B$ are independent, prove that $A$ and $B^{c}$ are independent (that $P(A\cup B^{c})=P(A)P(B^{c})$). Prove that $A^{c}$ and $B^{c}$ are also independent.
+\item Prove that that the probability of either $A$ or $B$ occurring is the probability of $A$ plus the probability of $B$ minus the probability of both occurring (that $P(A\cup B)=P(A)+P(B)-P(A \cap B)$). Explain where this result comes from by using a Venn diagram of the sample space $S$.
+\item Prove the result given in \eqref{eq:pb}. Again try and explain where this comes from using a Venn diagram.
+\end{enumerate}
+}
+
+\multiproblem{extra}{If you're not sick of probability questions yet here are some extra puzzlers.
+\begin{enumerate}
+  \item The Monty Hall problem is a famous probability question. In a game show, there are 3 doors. Behind two of the doors is a goat and behind one door is a car.
+The contestant, who wishes to win the car, is asked to select a door. The show host - Monty Hall - who knows which door hides the car - then opens one of the other
+doors to reveal a goat. The contestant is then asked whether they wish to stick with their original selection or whether they want to switch to the other unopened door. Should the contestant switch?
+ \item Two events are {\em mutually exclusive} if they cannot occur together. If $A$ and $B$ are mutually exclusive and each occur with non-zero probability, can they be independent?
+ \item Trains $X$ and $Y$ arrive at a station at a time between 9am and 9:20am inclusive with equal probability. Train $X$ stops for 4 minutes and train $Y$ for 5 minutes. The trains arrive independently of each other. 
+ \begin{enumerate}
+  \item What is the sample space $S$? Explain why we can think about it as a square with sides of length 20 minutes.
+  \item What is the probability that train $X$ arrives before train $Y$?
+  \item What is the probability that the trains meet at the station?
+  \item Given that they meet, what is the probability that train $X$ arrived before train $Y$?
+ \end{enumerate}
+ \item Assume that the cardinality (number of elements) in a sample space for some random trial is $|S|=N$. How many possible events are there?
+\end{enumerate}
+}
