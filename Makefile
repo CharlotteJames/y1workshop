@@ -9,6 +9,7 @@ WORKSHEETS =\
 			groups.pdf\
 			probability.pdf\
 			dynamics.pdf\
+			random_variables.pdf\
 			#
 
 FIGURES =\
@@ -44,6 +45,7 @@ FIGURES =\
 		 groups/triangle.pdf\
 		 groups/square.pdf\
 		 groups/rectangle.pdf\
+		 random_variables/pdfs.pdf\
 		 #
 
 all: $(WORKSHEETS)
