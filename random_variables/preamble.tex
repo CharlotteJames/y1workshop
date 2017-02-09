@@ -1,4 +1,4 @@
-This worksheet builds on the earlier worksheet on probability, introducing the idea of random variables, mean and variance and some common probability distributions.\\
+This worksheet builds on the earlier worksheet on probability. It introduces the idea of random variables, probability and cumulative distribution functions, expected value and variance and some common probability distributions.\\
 
 \subsubsection*{Random variables}
 
@@ -31,12 +31,12 @@ Some of the key concepts for discrete and continuous random variables are given 
 
 The {\em variance} of any random variable is defined in terms of the expected value as
 \begin{equation*}
-\text{Var}(X)=\sigma^{2}:=E((X-\mu)^{2})=E(X^{2})-\mu^{2}.
+\text{Var}(X)=\sigma^{2}:=E((X-\mu)^{2})=E(X^{2})-E(X)^{2}.
 \end{equation*}
 This looks like a lot of maths! Let's look at a simple example to try to understand what is going on.\\
 \newline
 {\bf Example}\\
-Consider the random trial of tossing a fair coin three times in succession. Suppose we are just interested in how many times we get tails. Therefore we define our random variable $X$ to be the number of tails. So we have $\phi(HHH)=0$, $\phi(HHT)=1$ etc. as in our earlier example. The number of tails $X$ can either be 0, 1, 2 or 3. The probability function just gives the probability of our random variable $X$ taking the value $x$. For instance $P_{X}(0)=\frac{1}{8}$. The probability function is shown in the table below. 
+Consider the random trial of tossing a fair coin three times in succession. Suppose we are just interested in how many times we get tails. We therefore define our random variable $X$ to be the number of tails. So we have $\phi(HHH)=0$, $\phi(HHT)=1$ etc. as in our earlier example. The number of tails $X$ can either be 0, 1, 2 or 3. The probability function just gives the probability of our random variable $X$ taking the value $x$. For instance $P_{X}(0)=\frac{1}{8}$. The probability function is shown in the table below. 
 
 \begin{center}
 \begin{tabular}{ |c|c|c|c|c| } 
@@ -69,7 +69,7 @@ The expected value $E(X)$ can be found by summing up $x P_{X}(x)$ for all values
 This tells us that the expected number of heads from tossing a fair coin 3
 times is 1.5.
 
-Note that on any perticular outcome we will always get an integer number of
+Note that on any particular outcome we will always get an integer number of
 heads: the expected value of a random variable does not need to correspond to
 any possible outcome of the random trial. It represents the mean value of the
 random variable if we were to repeat the trial a large number of times.
@@ -78,15 +78,15 @@ random variable if we were to repeat the trial a large number of times.
 Depending on what you trying to model, there are a number of common distributions that can capture what is going on. A summary of the distributions you have covered so far and their probability functions/pdfs is given below.
 
 \begin{center}
-    \begin{tabular}{|p{2.5cm} | p{2.5cm}| p{4cm} | p{5cm}|}
+    \begin{tabular}{|p{2.5cm} | p{2cm}| p{5cm} | p{5cm}|}
     \hline
     {\bf Distribution} & {\bf Type} & {\bf Parameters} & {\bf Probability function/pdf} \\ \hline
     Bernoulli & Discrete & Prob. success $p$ & $P(0)=1-p$, $P(1)=p$ \\ \hline
     Geometric & Discrete & Prob. success $p$ & $P(k)=p(1-p)^{k-1}$ \\ \hline
     Binomial & Discrete & Prob. success $p$, no. of trials $n$ & $P(k)=\binom{n}{k} p^{k} (1-p)^{n-k}$ \\ \hline
     Poisson & Discrete & Rate $\lambda$ & $P(k)=\frac{\lambda^{k}}{k!}\exp(-\lambda)$ \\ \hline
-    Exponential & Continuous & $\lambda$ & $f_{X}(x)=\lambda\exp (-\lambda x)$ if $x\geq 0$, else 0 \\ \hline
-    Normal & Continuous & $\mu$, $\sigma$ & $f_{X}(x)=\frac{1}{\sqrt{2 \pi} \sigma}\exp \left( - \frac{(x-\mu)^{2}}{2 \sigma^{2}} \right)$ \\
+    Exponential & Continuous & Rate $\lambda$ & $f_{X}(x)=\lambda\exp (-\lambda x)$ if $x\geq 0$, else 0 \\ \hline
+    Normal & Continuous & Mean $\mu$, variance $\sigma$ & $f_{X}(x)=\frac{1}{\sqrt{2 \pi} \sigma}\exp \left( - \frac{(x-\mu)^{2}}{2 \sigma^{2}} \right)$ \\
     \hline
     \end{tabular}
 \end{center}
