@@ -1,4 +1,4 @@
-\multiproblem{1}{Let us consider some simple questions on discrete random variables to warm up.
+\multiproblem{discrete}{Let us consider some simple questions on discrete random variables to warm up.
 \begin{enumerate}
  \item Consider the random trial of tossing a fair die. Let $X$ be the number on the die.
  \begin{enumerate}
@@ -22,13 +22,14 @@
 \end{enumerate}
 }
 
-\multiproblem{2}{Now let us consider some simple discrete examples.
+\multiproblem{cts}{Now let us consider some simple examples of continuous random variables.
 \begin{enumerate}
-\item A continuous \emph{uniform} random variable $X$ has the following pdf:
+\item A continuous \emph{uniform} random variable $X$ has the following pdf
 \begin{equation*} f_X(x) = \begin{cases} 
       \frac{1}{a}  &  0 \leq x \leq a \\
       0 &  \text{else} 
         		\end{cases} \end{equation*}
+        		where $a$ is a constant scalar.
         		\begin{enumerate}
         		 \item Sketch its pdf and its cdf.
         		 \item Find $E(X)$ and $\text{Var}(X)$.
@@ -40,18 +41,17 @@
         \end{center}
         For each:
         \begin{enumerate}
-         \item Find the value of $a$.
+         \item Find the value of the constant scalar $a$.
          \item Find the pdf.
          \item Find $E(X)$ and $\text{Var}(X)$.
         \end{enumerate}
 \end{enumerate}
 }
    
-\multiproblem{proofs}{Let us now consider some more proofy questions. Consider a scalar $a$ and random variables $X$ and $Y$.
+\multiproblem{proofs}{Let us now consider some more proofy questions. Consider random variable $X$ and constant scalar $a$.
 \begin{enumerate}
- \item For $X$ and $Y$ continuous, prove that $E(aX)=aE(X)$. Do the same for when $X$ and $Y$ are discrete.
+ \item When $X$ is continuous, prove that $E(aX)=aE(X)$. Do the same for when $X$ is discrete.
  \item Prove that $\text{Var}(a X)=a^{2}\text{Var}(X)$.
- \item If $X$ and $Y$ are continuous and independent, prove that $E(XY)=E(X)E(Y)$.
 \end{enumerate}
 }
 
@@ -60,13 +60,13 @@
 \item A fair die is thrown 12 times. Find the probability that the die will show a number less than 5 on exactly 4 of the throws.
 \item One week Alice received 25 spam emails and 75 non-spam emails. She then received 10 emails. 
 \begin{enumerate}
- \item What is the probability that exactly 6 of those will be spam?
- \item What is the probability that she will receive less than 3 spam emails?
+ \item Estimate the probability that exactly 6 of those will be spam?
+ \item Estimate the probability that she will receive less than 3 spam emails?
 \end{enumerate}
 \end{enumerate}
 }
 
-\multiproblem{binom}{
+\multiproblem{binom2}{
 A Bernoulli random variable has two possible outcomes: 0 or 1. It is
 characterised by the probability $p$ of having the outcome 1. For example
 the random variable representing the number of heads from flipping a fair coin
@@ -79,7 +79,7 @@ of heads obtained from flipping a fair coin 3 times is binomially distributed
 with $N=3$ and $p=\frac{1}{2}$.
 \begin{enumerate}
 \item The probability that a certain kind of component will survive a shock
-    test is 3/4. Use the binomial disctribution to estimate the probability
+    test is 3/4. Use the binomial distribution to estimate the probability
     that exactly 2 of the next 4 components tested survive.
 \item The probability that a patient recovers from a rare blood disease is
     0.4. 15 people are known to have contracted this disease. Assuming that
@@ -110,7 +110,6 @@ satisfied?
  \item Find the probability that a typical student will need at least one replacement pen to finish the exam.
  \item What is the probability that four or more students need a replacement pen?
 \end{enumerate}
-
 \end{enumerate}
 }
 
@@ -121,11 +120,11 @@ satisfied?
 \item Ten is the average number of oil tankers arriving each day at a certain
     port. The facilities at the port can handle at most 15 tankers per day.
     Estimate the probability that on a given day tankers have to be turned
-    away?
-\end{enumerate}
+    away.\\
+
 If n is quite large and p is small we can use the Poisson distribution to
 approximate the Binomial distribution.
-\begin{enumerate}
+
  \item In a certain industrial facility, accidents occur infrequently. It is
      known that the probability of an accident on any given day is 0.005 and
      accidents are independent of each other.
