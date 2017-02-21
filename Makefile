@@ -10,6 +10,7 @@ WORKSHEETS =\
 			probability.pdf\
 			dynamics.pdf\
 			random_variables.pdf\
+			odes.pdf\
 			#
 
 FIGURES =\
@@ -46,6 +47,10 @@ FIGURES =\
 		 groups/square.pdf\
 		 groups/rectangle.pdf\
 		 random_variables/pdfs.pdf\
+		 odes/sols.pdf\
+		 odes/newton.pdf\
+		 odes/tank.pdf\
+		 odes/rabbit.pdf\
 		 #
 
 all: $(WORKSHEETS)
