@@ -51,6 +51,10 @@ FIGURES =\
 		 odes/newton.pdf\
 		 odes/tank.pdf\
 		 odes/rabbit.pdf\
+		 dynamics/preamble.pdf\
+		 dynamics/preamble1.pdf\
+		 dynamics/preamble2.pdf\
+		 dynamics/hoop.pdf\
 		 #
 
 all: $(WORKSHEETS)
