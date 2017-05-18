@@ -1,0 +1,135 @@
+\multiproblem{entropy}{
+Entropy is the measure of uncertainty. The input to an entropy function is a probability distribution. If the outcome is completely unpredictable (for example, 50/50), the entropy will be high.
+\begin{equation*}
+ H_{n}(\mathbf{p})=-\sum_{i=1}^{n}p_{i}\log_{2}(p_{i})
+\end{equation*}
+	\begin{enumerate}
+		\item The simple example is a toss of an unbiased coin. If we toss a fair coin, there is a 50\% chance of getting tails, and a 50\% chance of getting heads. Work out the outcome of the coin toss as having an entropy, or information content in bits.
+		\item What will be the entropy for two coin tosses (4 outcomes)? What will be the entropy for three coin tosses (8 outcomes)?
+	\item Will the entropy change if the coin is biased? For example, there a 30\% chance of getting a tail and a 70\% chance of getting a head.
+	\end{enumerate}
+}
+
+\multiproblem{entropy2}{In 80-s the percentage of people with blond hair was 16\%, ginger hair - 16\%, brown hair - 36\% and black hair - 32\%.
+Now the percentage of people with blond hair is 8\%, ginger hair - 4\%, brown hair - 64\% and black hair - 24\%.
+When was it more difficult to gues the hair color of a random person?}
+
+\multiproblem{entropy3}{There are two sources of information with the following probability distributions:\\
+\vspace{12pt}
+	\begin{tabular}{ |p{2cm}|p{2cm}|p{2cm}|}
+		\hline
+		$x$ & $x_{1}$ &$x_{2}$\\
+		\hline
+		$P(x)$ & $p_{1}$ &$p_{2}$\\
+		\hline
+	\end{tabular}
+	\newline
+	\vspace{12pt}
+	\begin{tabular}{ |p{2cm}|p{2cm}|p{2cm}| p{2cm}| }
+		\hline
+		$y$ & $y_{1}$ &$y_{2}$&$y_{3}$ \\
+		\hline
+		$P(y)$ & $q_{1}$ &$q_{2}$&$q_{3}$ \\
+		\hline
+	\end{tabular}
+	\newline
+		\vspace{12pt}
+Which source of information has more uncertainty if:
+	\begin{enumerate}
+		\item $p_{1}=p_{2}$ and $q_{1}=q_{2}=q_{3}$
+		\item $p_{1}=q_{1}$ and $p_{2}=q_{2}+q_{3}$
+	\end{enumerate}}
+
+\multiproblem{joint_entropy}{
+Let $P(X=x_{i},Y=y_{i})=p_{i,j}$. Then the {\em joint entropy} of $X$ and $Y$ is defined as
+\begin{equation*}
+ H(X,Y)=\sum_{i=1}^{n}\sum_{j=1}^{m}-p_{i,j}\log_{2}(p_{i,j}).
+\end{equation*}
+The {\em conditional entropy} of $X$ given that $Y=y_{j}$ is the entropy of the probability distribution $P(X|Y=y_{j})$, given by
+\begin{equation*}
+ H(X|Y=y_{j})=\sum_{i=1}^{n}-P(x_{i}|y_{i})\log_{2}(P(x_{i}|y_{j})).
+\end{equation*}
+The conditional entropy of $X$ given $Y$ is the expected value of $H(X|Y=y_{j})$ over all possible $y_{j}$:
+\begin{equation*}
+ H(X|Y)=\sum_{j=1}^{m} P(y_{j})H(X|Y=y_{j}).
+\end{equation*}
+Let $I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=I(Y;X)$. $I(X;Y)$ is called the {\em mutual information} and quantifies the information about $X$ contained in $Y$.\\
+ Define $I(x,y)$ of the system described by the following matrix ($x$ and $y$ are transmitted and received signals)
+$P(x,y)=
+	\begin{bmatrix}
+		\frac{1}{8} & \frac{1}{8} & \frac{1}{8}\\ 
+		\frac{1}{8} & 0 &\frac{1}{8} \\ 
+		\frac{1}{8} & \frac{1}{8} & \frac{1}{8}
+	\end{bmatrix}$
+	\newline
+\underline{Solution}\\
+Find marginal probabilities:\\
+$p(x_{1})=$\\
+$p(x_{2})=$\\
+$p(x_{3})=$\\\\
+Work out entropy of $x$:\\
+$H(x)=$\\
+Work out entropies over all possible $y_{j}$:\\
+$H(x|y_{1})=$\\
+$H(x|y_{2})=$\\
+$H(x|y_{3})=$\\
+Work out conditional entropy:\\
+$H(x|y)=$\\\\
+Finally, work out mutual information:\\
+$I(x,y)=$}
+
+\multiproblem{logic}{Predicate Logic\\
+
+\begin{itemize}
+ \item Idempotence: $\theta \land \theta \equiv \theta $ and $\theta \lor \theta \equiv \theta$.
+ \item Double Negation: $\neg\neg\theta\equiv\theta$.
+ \item De Morgan's Laws: $\neg(\theta \land \phi) \equiv  \neg \theta \lor \neg \phi$ and $\neg(\theta \lor \phi) \equiv  \neg \theta \land \neg \phi$.
+ \item Commutativity: $\theta \land \phi \equiv \phi \land \theta$ and $\theta \lor \phi \equiv \phi \lor \theta$.
+ \item Associativity: $\theta \land (\phi \land \psi) \equiv (\theta \land \phi) \land \psi$ and $\theta \land (\phi \land \psi) \equiv (\theta \land \phi) \land \psi$.
+ \item Distributivity: $\theta \land (\phi \lor \psi) \equiv (\theta \land \phi) \lor (\theta \land \psi)$.
+ \item Contrapositive: $\theta \implies \phi \equiv \neg \phi \implies \neg \theta$.
+\end{itemize}
+
+	\begin{enumerate}
+		\item Use the Predicate Logic notation to write down the following statement: "All oaks are trees, all trees are plants. That is why all oaks are plants"
+		\item Using a truth table, prove that the above statement is correct.
+	\end{enumerate}
+	
+	Simplify the formula:\\
+ $\neg (p\lor\neg q) \land r\implies p\lor r$\\\\
+ \underline{Take the following steps:}\\
+	\begin{enumerate}
+ 		\item Use $a \implies b\equiv \neg  a \lor b$
+ 		\item Use de Morgan's Law: $\neg (a\land b) \equiv \neg a \lor \neg b$
+		 \item Use double negation: $\neg \neg a \equiv a$
+		 \item Use commutative law twice.
+		 \item Use $a \lor a \equiv a$
+		 \item Use $a \lor 1 \equiv 1$
+	\end{enumerate}}
+	
+	
+\multiproblem{set_theory}{Set Theory Logic\\
+
+\begin{itemize}
+ \item De Morgan: $(A \cup B)^{c}=A^{c}\cap B^{c}$ and $(A \cap B)^{c}=A^{c} \cup B^{c}$.
+ \item Commutative: $A \cup B = B \cup A$ and $A \cap B = B \cap A$.
+ \item Associative: $A \cup (B \cup C) = (A \cup B) \cup C$ and $A \cap (B \cap C)= (A \cap B) \cap C$. 
+ \item Distributive: $A \cup (B \cap C)= (A\cup B) \cap (A \cup C)$ and $A \cap (B \cup C)= (A \cap B) \cup (A \cap C)$.
+ \item Idempotent: $A \cup A = A$ and $A \cap A = A$.
+ \item Excluded Middle: $A \cup A^{c} = \mathcal{U}$ and $A \cap A^{c}=\phi$.
+ \item Complement: $(A^{c})^{c}=A$, $\mathcal{U}^{c}=\phi$ and $\phi^{c}=\mathcal{U}$.
+ \item Elimination: $A \cup \phi = A$, $A \cap \phi =\phi$, $A \cup \mathcal{U}=\mathcal{U}$ and $A \cap \mathcal{U}= A$.
+\end{itemize}
+
+ 	 Carry out the following operations: $A \cap B, A \cup B, A \setminus B, B \setminus A, A \times B, B \times A$ on:
+ 
+	\begin{enumerate}
+ 		\item $A = \left\lbrace a, 1, 2 \right\rbrace, B = \left\lbrace a, b, 1 \right\rbrace.$
+		 \item $A = \left\lbrace 2n-1| n \in \mathbb{N} \right\rbrace, B = \left\lbrace -1, 0, 1, 2, 3  \right\rbrace.$
+ 		\item $A = (- \infty, 3), B = [-1, + \infty ).$
+	\end{enumerate}
+  Simplify:\\
+	\begin{enumerate}
+		\item $ \neg (\neg A \cup \neg B \cup \neg C)$
+ 		\item $((A \cup B \cup C) \cap (A \cup B)) \setminus ((A \cup (B \setminus C)) \cap A)$
+	 \end{enumerate}}
