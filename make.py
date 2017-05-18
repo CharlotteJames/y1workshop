@@ -17,7 +17,8 @@ worksheets = [
     'random_variables', 
     'sets_of_solutions', 
     'statics', 
-    'trusses', 
+    'trusses',
+    'entropy', 
 ]
 
 def run_command(cmdline, **kwargs):
