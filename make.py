@@ -12,6 +12,7 @@ worksheets = [
     'groups', 
     'linear_systems', 
     'odes', 
+    'odes_linear_operators',
     'probability', 
     'proof_by_induction', 
     'random_variables', 
