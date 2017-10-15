@@ -17,7 +17,8 @@ worksheets = [
     'proof_by_induction', 
     'random_variables', 
     'sets_of_solutions', 
-    'statics', 
+    'statics',
+    'statics_new',
     'trusses',
     'entropy', 
 ]
