@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from __future__ import print_function
 
@@ -23,11 +23,18 @@ worksheets = [
     'entropy', 
 ]
 
+class NotInstalledError(Exception):
+    pass
+
 def run_command(cmdline, **kwargs):
     print("---------------")
     print("     Running %s" % cmdline)
     print("---------------")
-    subprocess.check_call(cmdline, **kwargs)
+    try:
+        subprocess.check_call(cmdline, **kwargs)
+    except FileNotFoundError:
+        message = "Subcommand failed: is '%s' installed and on PATH?"
+        raise NotInstalledError(message % (cmdline[0],))
 
 def make_worksheet(name):
     pdfname = name + '.pdf'
