@@ -1,0 +1,76 @@
+\multiproblem{7}{
+  Use proof by contradiction to prove that
+  \begin{enumerate}
+    \item There are no integer solutions to the equation $x^3+x=1$.
+    \item There are no integers $a$ and $b$ for which $6a+9b=1$.
+    \item $\sqrt{3}$ is irrational.
+    \item If $a$ is rational and $ab$ is irrational, then $b$ is irrational.
+    \item For all $n \in \mathbb{Z}$ if $n$ is odd, then $n^2$ is odd.
+    \item For all $n \in \mathbb{Z}$ if $n^2$ is odd, then $n$ is odd.
+  \end{enumerate}
+}
+
+\multiproblem{8}{Use proof by contrapositive to prove that
+  \begin{enumerate}
+    \item For $x\in\mathbb{R}$ if $x^2 + 5x < 0$ then $x < 0$.
+    \item For $x,y\in\mathbb{Z}$ if $xy$ is even, then $x$ is even or $y$ is even.
+    \item For $n\in\mathbb{Z}$ if $3\nmid n^2$, then $3 \nmid n$.
+    \item For $a,b,c\in\mathbb{Z}$ if $a\nmid bc$ then $a\nmid b$.
+    \item For $a,b\in\mathbb{Z}$ if $ab$ and $a+b$ are both even, then $a$ is
+      even and $b$ is even.
+  \end{enumerate}
+}
+
+\multiproblem{1}{Prove that the following statements hold $\forall~n\in\mathbb{N}$ by induction
+\begin{enumerate}
+\item \[ P(n):=\quad \sum_{i=1}^{n} i = \frac{1}{2} n (n+1) \]
+\item \[ P(n):=\quad \sum_{i=1}^{n}(2i-1)=n^2. \]
+\item \[ P(n):=\quad \sum_{i=0}^{n} 2^i = 2^{n+1}-1. \]
+\item \[ P(n):=\quad \sum_{i=0}^{n}r^{i}=\frac{1-r^{n+1}}{1-r}, \quad r\neq 1.\]
+\end{enumerate}
+}
+
+\multiproblem{2}{By induction prove that
+\begin{enumerate}
+ \item $(1+p)^{n} \geq 1+np$, where $p\ge 0$, $n\in \mathbb{N}$.
+ \item $n^{3}+2n$ is divisible by 3, for $n \in \mathbb{N}$.
+ \item $6^{n}-1$ is divisible by 5, for $n \in \mathbb{N}$.
+ \item the number $2^{4n-1}$ ends with an 8, for $n \in \mathbb{N}$.
+ \item $n!>2^{n}$ for $n\in\mathbb{N}$ and $n\geq 4$.
+ \item Use induction and the product rule of calculus to show prove that
+   $\frac{\mathrm{d}}{\mathrm{d}x}x^{n}=nx^{n-1}$, for $n \in
+   \mathbb{N}$.
+ \item Prove that $\frac{\mathrm{d}^{n}}{\mathrm{d}x^{n}}x^{n}=n!$, for $n \in
+   \mathbb{N}$.
+ \item Prove that $\int_{0}^{\infty}x^{n}\mathrm{e}^{-x}\mathrm{d}x=n!$, for
+   $n \in \mathbb{N}$. (Hint: Use integration by parts).
+\end{enumerate}
+}
+
+\multiproblem{6}{The Binomial Theorem states that
+\begin{equation}
+ (a+b)^{n}=\sum_{r=0}^{n} \binom{n}{r} a^{r} b^{n-r}
+ \label{eq:bin}
+\end{equation}
+where $a,b \in \mathbb{R}$ and $n\in \mathbb{N}$. The binomial coefficient is defined
+\[
+ \binom{n}{r}=\frac{n!}{r!(n-r)!}.
+\]
+\begin{enumerate}
+ \item Show that
+ \[
+  \binom{n}{r-1}+\binom{n}{r}=\binom{n+1}{r}.
+ \]
+ \item Establish that the Binomial Theorem holds where $n=1$ (the Base Step).
+ \item Show that if we assume \eqref{eq:bin} (i.e. that the Binomial Theorem holds for $n$) then
+ \[
+  (a+b)^{n+1}=(a+b)(a+b)^{n}=\sum_{r=1}^{n+1}\binom{n}{r-1}a^{r}b^{n+1-r}+\sum_{r=0}^{n}\binom{n}{r}a^{r}b^{n+1-r}.
+ \]
+(Hint: the trick is to make a substitution of $s=r+1$ in the first summation
+term after expanding).
+\item Prove the Binomial Theorem by induction (Hint: You have already
+  demonstrated the Base Step. To complete the Inductive Step, work from the
+  result you have found in (c). It will be helpful to use the result regarding
+  binomial coefficients that you found in (a)).
+\end{enumerate}
+}

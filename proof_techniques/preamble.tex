@@ -1,0 +1,57 @@
+This workshop will develop your ability to carry out a number of different proof
+techniques. Specifically we want to look at proof by \emph{induction},
+\emph{contrapositive} and \emph{contradiction}. We first summarise the basic
+idea behind each of these methods.
+
+Proof by contradiction is an indirect proof technique. This technique applies in
+any situation where we might want to prove something. Simply we want to prove
+a proposition $A$ and we do so by showing that $\neg A$ (not $A$) leads to a
+contradiction. It follows then that $\neg A$ is false and therefore that $A$
+is true. The method in steps is
+\begin{enumerate}
+  \item Assume $\neg A$
+  \item Use that to prove a contradiction (or an obviously false statement)
+  \item Conclude that $A$ is true.
+\end{enumerate}
+
+Proof by contrapositive is an indirect way of proving a statement of the form
+$A\implies B$ by instead proving that $\neg B \implies \neg A$. In words we
+want to prove that \emph{if A is true, then B is true}. We prove this
+indirectly by proving that \emph{if B is false, then A is false}.
+These two statements are logically equivalent but usually it is easier to
+phrase a proof for one than the other. When we prove that $A\implies B$
+indirectly like this the technique is known as \emph{proof by contrapositive}.
+The method is summarised as
+\begin{enumerate}
+  \item Assume $\neg B$ (that $B$ is false)
+  \item Use that assumption to prove $\neg A$
+  \item Conclude that $A\implies B$.
+\end{enumerate}
+
+Proof by induction applies to a situation where we have a statement
+parametrised by an integer which we denote as $P(n)$. For example we might
+have
+\begin{equation} \label{eq:ex1}
+ P(n):=\quad 1+2+3+\dots+n=\frac{n(n+1)}{2}\quad\forall ~n\in\mathbb{N}.
+\end{equation}
+The statement will typically hold for any natural number $n=0,1,2,3\dots$. The
+method works by first proving $P(0)$ and then proving that $P(n)\implies
+P(n+1)$ for \emph{all} $n$. It follows that $P(n)$ is true for all $n$. Note
+that in the inductive step we will typically ``assume'' that $P(n)$ is true to
+show that it implies $P(n+1)$ - this is known as the \emph{inductive
+hypothesis}. Please understand the difference between this assumption and
+assuming the result that we are trying to prove which is that $P(n)$ is true
+for \emph{all} $n$. The method is summarised as
+\begin{enumerate}
+  \item Prove the base step: $P(0)$
+  \item Prove the inductive step: $P(n) \implies P(n+1) \quad\forall ~n\in \mathbb{N}$
+    \begin{enumerate}
+      \item Assume $P(n)$ - the inductive hypothesis
+      \item Use that to prove $P(n+1)$.
+    \end{enumerate}
+    (Alternatively the inductive step can be proved by
+    contradiction/contrapositive)
+  \item Conclude that: $P(n) \quad\forall ~n \in \mathbb{N}$.
+\end{enumerate}
+
+\clearpage

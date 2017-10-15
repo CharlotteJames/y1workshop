@@ -16,6 +16,7 @@ worksheets = [
     'odes', 
     'odes_linear_operators',
     'probability', 
+    'proof_techniques', 
     'proof_by_induction', 
     'random_variables', 
     'sets_of_solutions', 
