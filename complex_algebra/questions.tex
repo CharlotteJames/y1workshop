@@ -45,14 +45,113 @@
           only use the definitions above in these problems.
           \begin{enumerate}
               \item $\imag(z_1 + z_2) = \imag(z_1) + \imag(z_2)$
+
+        \A{True. For the whole question let $z_i = x_i +jy_i$, for $i=1,2$, such that $\real(z_i)=x_i$ and $\imag(z_i)=y_i$. So we have
+\begin{equation*}
+\begin{split}
+  \imag(z_1+z_2) &= \imag(x_1+jy_1+x_2+jy_2) \\
+      &= y_1 + y_2 \\
+      &= \imag(z_1) + \imag(z_2).
+\end{split}
+\end{equation*}}
+
               \item $\real(jz) = - \imag(z)$
+
+        \A{True. Splitting into Cartesian form again we have,
+\begin{equation*}
+\begin{split}
+    \real(jz) &= \real(j(x+jy)) \\
+        &= \real(jx-y) \\
+        &= -y \\
+        &= -\imag(z).
+\end{split}
+\end{equation*}}
+
               \item $\imag(jz) = - \real(z)$
+
+        \A{False. In fact we find that,
+\begin{equation*}
+\begin{split}
+    \imag(jz) &= \imag(j(x+jy)) \\
+        &= \imag(jx-y) \\
+        &= x \\
+        &= \real(z).
+\end{split}
+\end{equation*}}
+
               \item $\real(rz) = r\real(z)$
+
+        \A{True. Remembering $r\in \mathbb{R}$,
+\begin{equation*}
+\begin{split}
+    \real(rz) &= \real(r(x+jy)) \\
+        &= rx \\
+        &= r\real(z)
+\end{split}
+\end{equation*}}
+
               \item $\real(z_1 z_2) = \real(z_1) \real(z_2)$
+
+        \A{False.
+\begin{equation*}
+\begin{split}
+    \real(z_1z_2) &= \real((x_1+jy_1)(x_2+jy_2)) \\
+        &= \real(x_1x_2-y_1y_2+j(x_1y_2+x_2y_1)) \\
+        &= x_1x_2-y_1y_2 \\
+        &= \real(z_1)\real(z_2)-\imag(z_1)\imag(z_2).
+\end{split}
+\end{equation*}
+So we find an extra real term in the expansion of the brackets, coming from the product of the imaginary components.}
+
               \item $z + z^* = 2\real(z)$
+
+        \A{True. The complex conjugate of $z$ is $z^*$, which we define in Cartesian form as $z^*=x-jy$. Note that $\real(z^*)=x=\real(z)$, and $\imag(z^*)=-y=-\imag(z)$. So we have,
+\begin{equation*}
+\begin{split}
+    z+z* &= (x+jy) + (x-jy) \\
+        &= 2x \\
+        &= 2\real(z).
+\end{split}
+\end{equation*}}
+
               \item $z - z^* = 2\imag(z)$
+
+        \A{False.
+\begin{equation*}
+\begin{split}
+    z-z^* &= (x+jy) - (x-jy) \\
+        &=  2jy\\
+        &= 2j\imag(z).
+\end{split}
+\end{equation*}
+So we were missing a factor of $j$.}
+
               \item $(z_1 + z_2)^* = z_1^* + z_2^*$
+
+        \A{True.
+\begin{equation*}
+\begin{split}
+    (z_1+z_2)^* &= ((x_1+jy_1) + (x_2+jy_2))^* \\
+        &=  ((x_1+x_2) + j(y_1+y_2))^*\\
+        &= ((x_1+x_2) - j(y_1+y_2)) \\
+        &= (x_1-jy_1) + (x_2 - jy_2) \\
+        &= z_1^*+z_2^*.
+\end{split}
+\end{equation*}}
+
               \item $(z_1 z_2)^* = z_1^* z_2^*$
+
+        \A{True.
+\begin{equation*}
+\begin{split}
+    (z_1z_2)^* &= ((x_1+jy_1)(x_2+jy_2))^* \\
+        &=  ((x_1x_2 - y_1y_2) + j(x_1y_2+x_2y_1))^*\\
+        &= ((x_1x_2 - y_1y_2) - j(x_1y_2+x_2y_1)) \\
+        &= (x_1-jy_1)(x_2-jy_2) \\
+        &= z_1^*z_2^*
+\end{split}
+\end{equation*}}
+
           \end{enumerate}
   \end{enumerate}
 }
@@ -62,34 +161,95 @@
       \item Modulus: The modulus of a complex number $z$ is denoted $|z|$
           and is defined by $|z|=\sqrt{zz^*}$.
           \begin{enumerate}
+
               \item Show that $|z|$ is real for any complex number
+          \A{Define $z=x+jy$, where $x,y \in \mathbb{R}$, so $z^*=x-jy$. \\
+               Using $|z|=\sqrt{zz^*}$, $|z| =\sqrt{(x+jy)(x-jy)}$, \\
+               which expands to $|z|= \sqrt{x^2+y^2}$. Given that $x,y \in \mathbb{R}$,
+        $|z|$ is always real.}
               \item Show that $|z|\ge 0$ for any complex number
+          \A{From the above expression, $\sqrt{x^2+y^2} \geq 0$, as $x$ and $y$
+        are real, so $x^2$ and $y^2$ will be positive, therefore $|z|\geq 0$.}
               \item Show that $|z| = |z^*|$.
+        \A{Using the definition $|z|=\sqrt{zz^*}$, $|{z^*}|=\sqrt{z^*(z^*)^*}$,
+        and $(z^*)^*=z$, therefore $|{z^*}|=\sqrt{z^*(z^*)^*}=\sqrt{zz^*}$}
               \item Show that if $z=x+j\,y$ with $x,y\in\mathbb{R}$ then
                   $|z|^2 = x^2 + y^2$.
+        \A{$z=x+jy$ and $z^*=x-jy$ so $|z|^2=(\sqrt{(x+jy)(x-jy)})^2$. Expanding
+        this leads to $|z|^2=x^2+y^2$.}
+        \end{enumerate}
+
               \item Which complex numbers satisfy $|z|^2 = z^2$?
-          \end{enumerate}
+        \A{$z^2=(x+jy)^2=x^2-y^2+2xyj$. From the previous question, $|z|^2=x^2+y^2$,
+        so setting the right-hand side of these equations equal to each other gives
+        $x^2-y^2+2xyj=x^2+y^2$, which cancels down to $0=y(2xj-2y)$.}
       \item Inverse: Prove that for any non-zero complex number $z$ there
           exists a multiplicative inverse $z^{-1}$ such that $zz^{-1} = 1$.
           Find a formula for $z^{-1}$ in terms of $z$.
+    \A{We know that $z \neq 0$, so $|z| \neq 0$. If we then assume that
+    $z^{-1}=\frac{z^*}{|z|^2}$, it can be shown that
+    $zz^{-1}=z.\frac{z^*}{|z|^2}=\frac{{|z|^2}}{{|z|^2}}=1$.}
       \item Divisibility: We say that a complex number $z_2$ divides another
           complex number $z_1$ if there exists a complex number $z_3$ such
           that $z_1 = z_2 z_3$. In this instance we would write that $z_3 =
           \frac{z_1}{z_2}$. Show that every \emph{non-zero} complex number
           divides every complex number and find a formula for $z_3$ in terms
           of $z_1$ and $z_2$.
+    \A{Given that $z_2 \neq 0$, there exists $z_2^{-1}$. We can therefore say that
+    $z_3=z_1z_2^{-1}$. It can then be shown that $z_2z_3=z_2z_1z_2^{-1}=z_1$.}
+
       \item Which of the following is true? Prove/disprove as necessary.
           \begin{enumerate}
               \item $|z_1 z_2| = |z_1||z_2|$
-              \item $|z_1 + z_2| = |z_1| + |z_2|$
+        \A{True: taking $z_{1}=x_{1}+jy_{1}$ and $z_{2}=x_{2}+jy_{2}$,
+        $|{z_{1}z_{2}}|=|{(x_{1}+jy_{1})(x_{2}+jy_{2})}|$ \\
+             Expanding this out makes $|{x_{1}x_{2}+x_{2}jy_{1}+jy_{2}x_{1}-y_{1}y_{2}}|=
+        |{x_{1}x_{2}-y_{1}y_{2}+j(x_{2}y_{1}+y_{2}x_{1})}|$.
+        Using $|{z}|=\sqrt{zz^*}, |{x_{1}x_{2}-y_{1}y_{2}+j(x_{2}y_{1}+y_{2}x_{1})}|$
+        $= \\ \sqrt{(x_{1}x_{2}-y_{1}y_{2}+j(x_{2}y_{1}+y_{2}x_{1}))(x_{1}x_{2}-y_{1}y_{2}-j(x_{2}y_{1}+y_{2}x_{1}))} $
+             which expands to $|{z_{1}z_{2}}|$
+        $=\sqrt{(x_{1}x_{2}-y_{1}y_{2})^2+(x_{1}y_{2}-y_{1}x_{2})^2}$ .\\
+             This can be rearranged into the form $|{z_{1}z_{2}}|$
+        $=\sqrt{(x_{1}^{2}+y_{1}^2)(x_{2}^{2}+y_{2}^2)}$, \\
+             which then becomes $|{z_{1}z_{2}}|=\sqrt{x_{1}^{2}+y_{1}^2}.\sqrt{x_{2}^{2}+y_{2}^2}=|{z_{1}}||{z_{2}}|$.}
+        \item $|z_1 + z_2| = |z_1| + |z_2|$
+        \A{False: taking $z_{1}=x_{1}+jy_{1}$ and $z_{2}=x_{2}+jy_{2}$, $|z_1+z_2|$
+        $=|{x_1+x_2+j(y_1+y_2)}|=\sqrt{(x_1+x_2)^2+(y_1+y_2)^2}$ \\
+        So $|{z_1}|+|z_2|=\sqrt{x_1^2+y_1^2}+\sqrt{x_2^2+y_2^2} \neq |z_1+z_2|$}
               \item $|z^{-1}| = |z|$
+        \A{False: using $z^{-1}=\frac{z^*}{|z|^2}$
+        and substituting in $z=x+jy$, $z^{-1}=\frac{x-jy}{x^2+y^2}$ \\
+             Therefore, $|z^{-1}|=\sqrt{\frac{x-jy}{x^2+y^2}.\frac{x+jy}{x^2+y^2}}$. \\
+             This simplifies to $z^{-1}=\frac{\sqrt{x^2+y^2}}{x^2+y^2}$,
+        which is not equal to $|z|=\sqrt{x^2+y^2}$}
               \item $|\frac{z_1}{z_2}| = \frac{|z_1|}{|z_2|}$
+        \A{True: $|{\frac{z_1}{z_2}}|=|{\frac{x_1+jy_1}{x_2+jy_2}}|$=$
+        |{\frac{(x_1+jy_1)(x_2-jy_2)}{x_2^2+y_2^2}}|$
+        $=|{\frac{(x_1x_2+y_1y_2)+j(y_1x_2-y_2x_1)}{x_2^2+y_2^2}}|=$ \\
+        $\sqrt{\frac{(x_1x_2+y_1y_2)^2+(y_1x_2-y_2x_1)^2}{{x_2^2+y_2^2}^2}}$. \\
+        This can be expanded out and cancelled down to form
+        $|{\frac{z_1}{z_2}}|=\sqrt{\frac{(x_1^2+y_1^2)(x_2^2+y_2^2)}{(x_2^2+y_2^2)^2}}=$
+        $\sqrt{\frac{(x_1^2+y_1^2)}{(x_2^2+y_2^2)}}=\frac{{|z_1|}}{|z_2|}$}
+
               \item $\left(\frac{z_1}{z_2}\right)^* = \frac{z_1^*}{z_2^*}$
+        \A{True: using $(\frac{z_{1}}{z_{2}})^* = (\frac{x_{1}+jy_{1}}{x_{2}+jy_{2}})^*$
+        and then rationalising to get $(\frac{z_{1}}{z_{2}})^*$=
+        $(\frac{(x_{1}+jy_{1})(x_{2}-jy_{2})}{x_{2}^2+jy_{2}^2})^*$ \\
+             this can be rearranged to the form $(\frac{z_{1}}{z_{2}})^*$=
+        $(\frac{x_{1}x_{2}+y_{1}y_{2}+i(y_{1}x_{2}-x_{1}y_{2})}{x_{2}^2+jy_{2}^2})^*$.
+        Applying the conjugate gives $(\frac{z_{1}}{z_{2}})^*$=$(\frac{x_{1}x_{2}+y_{1}y_{2}-i(y_{1}x_{2}-x_{1}y_{2})}{x_{2}^2+jy_{2}^2})$, \\
+             which can be rearranged to $(\frac{x_{1}x_{2}+y_{1}y_{2}-i(y_{1}x_{2}-x_{1}y_{2})}{x_{2}^2+jy_{2}^2})$=
+        $(\frac{(x_{1}-jy_{1})(x_{2}+jy_{2})}{x_{2}^2+jy_{2}^2})$=$\frac{x_{1}-jy_{1}}{x_{2}-jy_{2}}$=$\frac{z_{1}^*}{z_{2}^*}$}
+
           \end{enumerate}
       \item Problem: Given $a,b,z\in\mathbb{C}$ and $|z|=1$ show that
           $\left|\frac{az + b}{b^*z + a^*}\right| = 1$
+    \A{From the relationship $|{z}|^2=zz^*$, $|{\frac{az+b}{b^*z+a^*}}|=\sqrt{\frac{(az+b)(az+b)^*}{(b^*z+a*)(bz^*+a)}}$. \\
+     This expands out to $|{\frac{az+b}{b^*z+a^*}}|$=$\sqrt{\frac{aa^*zz^*+bb^*+ba^*z*+b^*az}{bb^*zz^*+a^*bz^*+aa^*+ab^*z}}$ \\
+     We also know that $|{z}|=1$, which means that $\sqrt{zz^*}=1$, which leads to $zz^*=1$. This can be substituted into the
+     above expression, leading to $|{\frac{az+b}{b^*z+a^*}}|$=$\sqrt{\frac{aa^*+bb^*+ba^*z*+b^*az}{bb^*+a^*bz^*+aa^*+ab^*z}}=1$.}
 
-  \end{enumerate}
+\end{enumerate}
 }
 
 \multiproblem{Polynomials}{
@@ -97,10 +257,20 @@
         \item
             \begin{enumerate}
                 \item Show that $(z^*)^2 = (z^2)^*$.
+        \A{Define $z=x+jy$, where $x,y \in \mathbb{R}$, so $z^*=x-jy$. \\
+           $(z^*)^2=(x-jy)^2=x^2+y^2-j(2y)=(x^2+y^2+j(2y))^*=((x+jy)^2)^*$}
                 \item Show that $(z^*)^n = (z^n)^*$ for positive integer $n$ ($n\in\mathbb{N}$).
+        \A{$(z^*)^n=(\frac{|z|^2}{z})^n=((\frac{|z|^2}{z^*})^n)^*=(z^n)^*$
+        (bearing in mind $|z|^*=|z|$, as $|z|$ is real for any complex number,
+        and the conjugate of a real number is itself).}
                 \item Show that $(z^*)^ {-1} = (z^{-1})^*$.
+        \A{$(z^*)^{-n}=(\frac{z}{|z|^2})^n=((\frac{z^*}{|z|^2})^n)^*=(z^{-n})^*$}
                 \item Show that $(z^*)^ {-n} = (z^{-n})^*$ for $n\in\mathbb{N}$.
+        \A{From parts ii and iv, this statement holds, as i demonstrates $(z^*)^n=z^n)^*$
+        for all positive integers, and iv demonstrates $(z^*)^n=z^n)^*$ for all negative integers,
+        which covers $n \in \mathbb{N}$.}
                 \item Show that $(z^*)^n = (z^n)^*$ for integer $n$ ($n\in\mathbb{Z}$).
+        \A{$(rz)^*=r^*z^*$ and as $r \in \mathbb{R}$, $r*=r$, so $(rz)^*=rz^*$}
                 \item Show that $(rz)^* = rz^*$ for $r\in\mathbb{R}$.
             \end{enumerate}
         \item Given a quadratic polynomial
@@ -113,12 +283,20 @@
             Where could the pairs of roots for a quadratic with real
             coefficients lie in the complex plane (draw a diagram)? For
             example consider $P(z)=z^2-2\,z+c$ with $c=0$, $c=1$ or $c=2$.
+    \A{Given $P(z)=az^2+bz+c$, substitute in $z_{1}$ to get $P(z_1)=a(z_1)^2+bz_1+c$.
+    As $z_1$ is a root, we can set the left hand side to zero, giving $0=a(z_1)^2+bz_1+c$.
+    The conjugate of both sides can then be taken, giving $0^*=(a(z_1)^2+bz_1+c)^*$.
+    The conjugate of 0 is 0, so $0=(a((z_1)^2)^*+b(z_1)^*+c)$ holds, showing that $z_1$ is also a root.}
         \item Given a polynomial of any order
             \[
                 P(z) = a_0 + a_1\,z + a_2\,z^2 + \cdots
             \]
             with $a_i \in \mathbb{R}$ show that if $z_1$ is a root then
             $z_1^*$ is also a root.
+    \A{The same explanation applies --- if $z_1$ is a root, then $z_1$
+    can be substituted in and $P(z)$ set to zero. The conjugate of both sides
+    can be taken (given that $a_i \in \mathbb{R}$, the real coefficients will
+    remain the same) and since the conjugate of zero is zero, $z_1^*$ must be a root.}
     \end{enumerate}
 }
 
@@ -135,6 +313,21 @@
                 \mathrm{e}^{j(\theta_1+\theta_2)} =
                 \mathrm{e}^{j\theta_1}\mathrm{e}^{j\theta_2}.
             \]
+
+        \A{Using $\mathrm{e}^{j\theta}=\cos\theta+j\sin\theta$, with $\theta=\theta_1+\theta_2$, we have
+\begin{equation*}
+\mathrm{e}^{j(\theta_1+\theta_2)} = cos(\theta_1+\theta_2)+j\sin(\theta_1+\theta_2).
+\end{equation*}
+Expanding using the multiple angle formulae for $\cos$ and $\sin$, we find
+\begin{equation*}
+\begin{split}
+\cos(\theta_1+\theta_2)+j\sin(\theta_1+\theta_2) &= \cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2 + j(\sin\theta_1\cos\theta_2+\sin\theta_2\cos\theta_1) \\
+    &=(\cos\theta_1+j\sin\theta_1)(\cos\theta_2+j\sin\theta_2) \\
+    &=\mathrm{e}^{j\theta_1}\mathrm{e^{j\theta_2}},
+\end{split}
+\end{equation*}
+as required.}
+
         \item We define more generally the exponential of any complex number
             $z=x+j\,y$ ($x,y\in\mathbb{R}$) via
             \[
@@ -145,11 +338,46 @@
                 \mathrm{e}^{z_1+z_2} = \mathrm{e}^{z_1}\mathrm{e}^{z_2}
             \]
             for any $z_1,z_2\in\mathbb{C}$.
+
+        \A{We can write this relation as $\mathrm{e}^z = \mathrm{e}^{\real(z)}\mathrm{e}^{j\imag(z)}$. Using this and $z=z_1+z_2$ we have,
+\begin{equation*}
+\begin{split}
+    \mathrm{e}^{z_1+z_2} &= \mathrm{e}^{\real(z_1+z_2)}\mathrm{e}^{j\imag(z_1+z_2)} \\
+        &= \mathrm{e}^{\real(z_1)}\mathrm{e}^{\real(z_2)}\mathrm{e}^{j\imag(z_1)}\mathrm{e}^{j\imag(z_2)} \\
+        &= \mathrm{e}^{\real(z_1)+j\imag(z_1)}\mathrm{e}^{\real(z_2)+j\imag(z_2)} \\
+        &= \mathrm{e}^{z_1}\mathrm{e}^{z_2},
+\end{split}
+\end{equation*}
+where we have used $\real(z_1+z_2)=\real(z_1)+\real(z_2)$ and $\imag(z_1+z_2) = \imag(z_1) + \imag(z_2)$.}
+
         \item Show that any complex number $z$ can be written in the form
             $z=r\mathrm{e}^{j\theta}$ with $r=|z|$ and $\theta\in\mathbb{R}$.
+
+        \A{We know we can write $z=x+jy$, so now choose new coordinates such that $x=r\cos\theta$ and $y=r\sin\theta$, for $\theta\in\mathbb{R}$. This choice becomes clear if we draw any $z$ on an Argand diagram and consider the right-angled triangles formed by the axes and the vector $z$. So we have that $z=r\cos\theta+jr\sin\theta$, taking the modulus,
+\begin{equation*}
+\begin{split}
+    |z| &= |r(\cos\theta+j\sin\theta)| \\
+        &= \sqrt{r^2(\cos^2\theta-\sin^2\theta)} \\
+        &= \sqrt{r^2} \\
+        & = r.
+\end{split}
+\end{equation*}
+Then using Euler's formula, we have that $z = r(\cos\theta+j\sin\theta) = r(\mathrm{e}^{j\theta})$, for $r=|z|$ and $\theta\in\mathbb{R}$.}
+
         \item Show that if $z=r\mathrm{e}^{j\theta}$ then
             \[
                 z^*=\mathrm{e}^{-j\theta} = \cos{\theta}-j\sin{\theta}.
             \]
+
+    \A{Again, starting with Cartesian coordinates, if $z^*=x-jy$, then in polar form:
+\begin{equation*}
+\begin{split}
+z^* &= r(\cos\theta-\sin\theta) \\
+    &= r(\cos(-\theta) +j\sin(-\theta)) \\
+    &= r\mathrm{e}^{-j\theta},
+\end{split}
+\end{equation*}
+via Euler's equation.}
+
     \end{enumerate}
 }
