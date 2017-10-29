@@ -1,27 +1,52 @@
-In this worksheet we consider planar statics problems, and how to solve the linear systems of equations that arise when solving them.
+In this worksheet we consider planar statics problems, and how to solve the
+linear systems of equations that arise when solving them.
 
-From Newton's laws of motion, for the static equilibrium of a body both translational forces and moments must balance. Specifically, the vector sum of the external forces must equal zero:
+From Newton's laws of motion, for the static equilibrium of a body both
+translational forces and moments must balance. Specifically, the vector sum of
+the external forces must equal zero:
 \begin{equation} \label{eq:trans}
  \sum_{i} {\bf F}_{i}= \bf{0}
 \end{equation}
-This is called the {\em external force balance}. Also, the sum of moments, $\bf{M}$, about an arbitrary point ${\bf r}$ of all forces is zero:
+This is called the {\em external force balance}. Also, the sum of moments,
+$\bf{M}$, about an arbitrary point ${\bf r}$ of all forces is zero:
 \begin{equation} \label{eq:mom}
  \sum_{i} {\bf M}_{i}= \sum_{i} ({\bf r}_{i}-{\bf r}) \times {\bf F}_{i}= 0.
 \end{equation}
-This is called the {\em external torque balance}. It can be proven that there is no additional linearly independent balance solely involving the external forces.
+This is called the {\em external torque balance}. It can be proven that there
+is no additional linearly independent balance solely involving the external
+forces.
 
-Now for planar statics problems, \eqref{eq:trans} becomes
+Now for planar (2D) statics problems,~\eqref{eq:trans} becomes
 \[
  {\bf F}_{i}=\begin{pmatrix}
          F_{i,x} \\ F_{i,y} \\ 0
         \end{pmatrix}
 \]
-so it follows that the external force balance yields two equations, $\sum F_{i,x} =0$ and $\sum F_{i,y}=0$. For such problems the magnitude of the moment of a given force can be found by simply multiplying the force by the perpendicular distance through which it levers. The external torque balance \eqref{eq:mom} yields a single equation, so there are three equations in total for static equilibrium.
+so it follows that the external force balance yields two equations, $\sum
+F_{i,x} =0$ and $\sum F_{i,y}=0$.
 
-For a given statics problem with more unknowns than equations, the system of simultaneous equations does not have a unique solution and the problem is said to be {\em statically indeterminate}.
+For such problems the moment of any force will be in the $z$ direction so it
+only has one non-zero component $M_3$. Also we can find the $z$-moment $M_3$
+by simply multiplying the force by the perpendicular distance through which it
+levers. The external torque balance~\eqref{eq:mom} yields a single equation,
+so there are three equations in total for static equilibrium.
 
-If one body is {\em resting} on another, the reaction force $N$ must be positive.
+For a given statics problem with more unknowns than equations, the system of
+simultaneous equations does not have a unique solution and the problem is said
+to be {\em statically indeterminate}.
 
-If friction acts a point of contact, the friction condition $F\leq \mu N$ must always be satisfied.
+If one body is {\em resting} on another, the normal reaction force $N$ must be
+positive.
 
-The force in a spring of stiffness $k$ with extension $x$ from its natural length $L$ is given by Hooke's law, $F=kx$.
+If friction acts a point of contact, the friction condition $F\leq \mu N$ must
+always be satisfied.
+
+For the purpose of calculating moments we can always consider that the force of
+gravity acting on a body acts at its \emph{centre of mass}. The centre of mass
+can be defined formally but for symmetric bodies we can simply think of this
+as the ``middle'' of the body.
+
+%The force in a spring of stiffness $k$ with extension $x$ from its natural
+%length $L$ is given by Hooke's law, $F=kx$.
+
+\clearpage
