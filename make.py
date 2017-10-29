@@ -20,8 +20,8 @@ worksheets = [
     'proof_by_induction', 
     'random_variables', 
     'sets_of_solutions', 
-    'statics',
-    'statics_new',
+    'force_balance',
+    'planar_statics',
     'trusses',
     'entropy', 
 ]
