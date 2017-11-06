@@ -1,31 +1,96 @@
 \multiproblem{1}{
   Consider a rod of known length $l$ and mass $m$ resting on
   three supports, as shown.\\
-  \begin{minipage}{0.6\textwidth}
-    \vspace{0.1in}
+    \begin{center}
+      \includegraphics[scale=1.5]{fig_1.pdf}
+    \end{center}
     \begin{enumerate}
       \item Draw a free-body diagram for the rod. Suppose we know that
         $N_{3}=4\newtons$. Use the external force balance and moment balance
         about $A$ to find the reaction forces $N_{1}$ and $N_{2}$.
+        \A{
+          Our free body diagram will look the same as the diagram to the right
+          but perhaps without the supports and with $N_3=4\newtons$ and $W=mg$
+          acting at the centre. Horizontal force balance is useless but
+          vertical force balance and moments gives
+          \begin{align*}
+              N_1 + N_2 + 4\newtons &= mg \\
+              \frac{l}{4}N_1 + \frac{l}{3}N_2 + \frac{3l}{4}4\newtons
+                  &= \frac{l}{2}mg
+          \end{align*}
+          which has the unique solution
+          \[
+              N_1 = 20\newtons - 2mg, \quad\quad N_2 = 3mg - 24\newtons.
+          \]
+        }
       \item Consider the case where all reaction forces at the supports are
         unknown. Find the external force balance and the moment balance about
         points $A$ and $B$. Write the system in the form ${\bf A x}={\bf b}$,
         where ${\bf x}=(N_{1},N_{2},N_{3})^{T}$, ${\bf A}$ is a $3\times 3$
         matrix of known values and ${\bf b}$ is a $3 \times 1$ vector of known
         values.
+        \A{
+          The equations are
+          \begin{align*}
+            N_1 + N_2 + N_3 &= mg\\
+            \frac{l}{4}N_1 + \frac{l}{3}N_2 + \frac{3l}{4}N_3 &= \frac{l}{2}mg
+          \end{align*}
+          and dividing by $l$ we can put this into matrix form as
+          \begin{equation*}
+            \begin{pmatrix}
+              1 & 1 & 1 \\
+              \frac{1}{4} & \frac{1}{3} & \frac{3}{4}
+            \end{pmatrix}
+            \begin{pmatrix}
+              N_1 \\ N_2 \\ N_3
+            \end{pmatrix}
+              =
+            \begin{pmatrix}
+              mg \\ \frac{1}{2}mg
+            \end{pmatrix}
+          \end{equation*}
+        }
       \item Construct the augmented matrix $(\mathbf{A}|\mathbf{b})$ and use
         this to solve for ${\bf x}$ and find the set of all possible values for
         the reaction forces $N_{1}$, $N_{2}$ and $N_{3}$. Is the system
         statically indeterminate?
+        \A{
+          Our augmented matrix is
+          \begin{equation*}
+            \left(
+              \begin{array}{ccc|c}
+                1 & 1 & 1 & mg \\
+                \frac{1}{4} & \frac{1}{3} & \frac{3}{4} & \frac{1}{2}mg
+              \end{array}
+            \right)
+          \end{equation*}
+          This has the family of solutions (for $\beta \in \mathbb{R}$)
+          \[
+            N_1 = 5\beta - 2mg,\quad N_2 = 3mg - 6\beta,\quad N_3 = \beta.
+          \]
+          The system is statically indeterminate since we didn't get a unique
+          solution for the reaction forces.
+        }
       \item From the resting constraint $N_{i}>0$. Use this to find the minimum
         and maximum values of each of the reaction forces.
+        \A{
+          This gives us one inequality for $\beta$ for each of the reaction
+          forces. For example we have that $N_1 > 0$ which means that $5
+          \beta - 2mg > 0$ or $beta > \frac{2}{5}mg$. Combining all three
+          inqualities we find that
+          \[
+            \frac{2}{5}mg < \beta < \frac{1}{2}mg
+          \]
+          so although we don't have a unique solution we have some knowledge
+          of $\beta$. With this we get the minimum and maximum values for the
+          reaction forces to find that
+          \[
+            0 < N_1 < \frac{1}{2}mg,\quad
+            0 < N_2 < \frac{3}{5}mg,\quad
+            \frac{2}{5}mg < N_3 < \frac{1}{2}mg.
+          \]
+        }
     \end{enumerate}
-  \end{minipage}
-  \begin{minipage}{0.3\textwidth}
-    \begin{center}
-      \includegraphics[scale=1.5]{fig_1.pdf}
-    \end{center}
-  \end{minipage}
 }
 
 \multiproblem{2}{
@@ -36,17 +101,67 @@
     \item Draw a good diagram of this body and the forces acting on it. The
       shape of the body is irrelevant for your answers to this question but
       feel free to draw it as the triangle $ABC$.
+      \A{
+        \begin{center}
+          \includegraphics{abc.pdf}
+        \end{center}
+      }
     \item Suppose that the force $\mathbf{F}_B=\mathbf{0}$. What would
       $\mathbf{F}_C=(F_{C1},F_{C2})$ need to be for force and moment balance
       to hold?
+      \A{
+        This is a trick question: no equilibrium is possible if
+        $\mathbf{F}_B=\mathbf{0}$. Force balance easily gives us that
+        $\mathbf{F}_C = -\mathbf{F}_A = (-2,-7)\newtons$. However moment
+        balance around $C$ gives that
+        \[
+          \mathbf{r}_{CA} \times \mathbf{F}_A = (-3,-1,0)\metres \times
+          (2,7,0)\newtons = (0, 0, -18)\,\mathrm{Nm} = \mathbf{0}
+        \]
+        which is clearly untrue. The lesson here is that it is not enough to
+        simply find the unknown forces in a statics problem -- we need to
+        check all three equations for force and moment balance to determine
+        whether an equilibrium is possible at all. A diagram makes it obvious
+        that moment balance is impossible:
+        \begin{center}
+          \includegraphics{abc_mom.pdf}
+        \end{center}
+      }
     \item Suppose instead that the force $\mathbf{F}_B=(F_B,0)$ for what
       values of $F_B$, $F_{C1}$ and $F_{C2}$ would there be equilibrium?
+      \A{
+        Now we allow $\mathbf{F}_B$ to have a non-zero horizontal component
+        equilbrium is possible. We do horizontal/vertical force balance and
+        moment balance around $C$ to find
+        \begin{align*}
+          2\newtons + F_B + F_{C1} &= 0 \\
+          7\newtons + F_{C2} &= 0 \\
+          -18\,\mathrm{Nm} + (2\metres) F_B &= 0
+        \end{align*}
+        which gives a unique solution for the forces
+        \[
+          \mathbf{F}_B = (9, 0)\newtons,\quad
+          \mathbf{F}_C = (-11,-7)\newtons.
+        \]
+      }
     \item Now suppose that we know nothing about either of $\mathbf{F}_B$ and
       $\mathbf{F}_C$. Find the set of all possible combinations of
       $\mathbf{F}_B$ and $\mathbf{F}_C$ for which equilibrium is possible.
+      \A{
+        Here we have 3 equations for 4 unknowns so we can will find an
+        infinite family of possible solutions.
+      }
     \item Use your understanding of linear systems with different numbers of
       equations and unknowns to explain why we get the three different
       situations seen in the previous parts.
+      \A{
+        In each of the previous parts force and moment balance gives us 3
+        equations. In the first part we had 2 unknowns making the system
+        over-determined so that we are likely to have no solutions (as is the
+        case). In the second part we have 3 unknowns and we get a unique
+        solution. In the third part we have too few equations for the number
+        of unknowns making the system statically indeterminate.
+      }
   \end{enumerate}
 }
 
@@ -55,22 +170,51 @@
   the wall at one end and suspended from the wall by a light inextensible
   string that is attached to the other end of the rod at a known angle
   $\theta$, as shown.\\
-  \begin{minipage}{0.6\textwidth}
-    \begin{enumerate}
-      \item Draw a free-body diagram for the rod. Assuming the system is in
-        static equilibrium, find the tension in the string.
-      \item Now find the contact force at the pin support. What angle does it
-        make to the horizontal?
-      \item Show that the lines of action of all three forces intersect at a
-        single point. Argue that this should always happen for a body acted
-        upon by three forces.
-    \end{enumerate}
-  \end{minipage}
-  \begin{minipage}{0.3\textwidth}
     \begin{center}
       \includegraphics[scale=1.8]{fig_3.pdf}
     \end{center}
-  \end{minipage}
+    \begin{enumerate}
+      \item Draw a free-body diagram for the rod. Assuming the system is in
+        static equilibrium, find the tension in the string.
+        \A{
+          Here is our free-body diagram
+          \begin{center}
+            \includegraphics{pinwall.pdf}
+          \end{center}
+          Moment balance around the pin support at the left gives that
+          $LT\sin{\theta} = \frac{L}{2}mg$ so $T = \frac{mg}{2\sin{\theta}}$.
+        }
+      \item Now find the contact force at the pin support. What angle does it
+        make to the horizontal?
+        \A{
+          We can now do force balance. Suppose that $\mathbf{F} = (F_x,F_y)$
+          and we have that $\mathbf{T} = (-T\cos{\theta},T\sin{\theta})$
+          balance gives
+          \begin{align*}
+            F_x - T\cos{\theta} &= 0 \\
+            F_y + T\sin{\theta} &= mg.
+          \end{align*}
+          The second equation gives $F_y = \frac{1}{2}mg$ so that the vertical
+          components of $\mathbf{F}$ and $\mathbf{T}$ are equal.  The first
+          equation gives that the horizontal components of $\mathbf{T}$ and
+          $\mathbf{F}$ are equal and opposite. This means that the angle made
+          by $\mathbf{F}$ is also $\theta$
+        }
+      \item Show that the lines of action of all three forces intersect at a
+        single point. Argue that this should always happen for a body acted
+        upon by three forces.
+        \A{
+          Geometrically it is easy to see that all three forces intersect at a
+          single point above the centre of the rod. To argue this in general
+          consider the lines of action of the three forces. If two of these
+          lines intersect at a point then take moments about that point.
+          Moments about this point can only come from the third force so it
+          must have no moment about this point. If the third has no moments
+          about this point then its line of action must also go through the
+          same point. The only exception (in 2D) is if all three lines are
+          parallel (as in question 1).
+        }
+    \end{enumerate}
 }
 
 \multiproblem{4}{
