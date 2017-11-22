@@ -37,7 +37,7 @@ def run_command(cmdline, options,**kwargs):
     print("     Running %s" % cmdline)
     print("---------------")
     try:
-        subprocess.check_call(cmdline, **kwargs)
+        subprocess.check_call(cmdline, shell=True, **kwargs)
     except FileNotFoundError:
         message = "Subcommand failed: is '%s' installed and on PATH?"
         raise NotInstalledError(message % (cmdline[0],))
