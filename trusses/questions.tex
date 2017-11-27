@@ -5,17 +5,53 @@
   \includegraphics[scale=1.5]{triangle.pdf}
   \end{center}
   \begin{enumerate}
-    \item First analyse the general situation of the truss. What are the
+    \item{ First analyse the general situation of the truss. What are the
       external forces on the truss? What reaction forces could there be at the
       supports? How many unknown reaction forces are there for the truss as a
       whole? Draw a free body diagram showing the truss and the external
-      forces applied to it.
-    \item Use force and moment balance for the truss as a whole to find all
-      the external reaction forces.
-    \item Redraw the diagram for the truss with the values of the reaction
+      forces applied to it.\A{ \\
+Firstly, we need to know what external forces are acting on the truss as a whole. There is clearly a horizontal force exerted at point $B$ of 2 kN. The pin joint at $A$ can also exert a force on the truss with both horizontal and vertical components, as the joint allows no translation. At point $C$ the roller joint allows horizontal translation and so it can only exert a vertical force. So, we can draw these forces on our diagram.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_1.pdf}
+  \end{center}
+To simplify the diagram let us draw the truss a particle for our free body force diagram.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_2.pdf}
+  \end{center}
+}}
+    \item{ Use force and moment balance for the truss as a whole to find all
+      the external reaction forces.\A{Since the truss is in static equilibrium leads us to the following equations:
+$F_{V_C}+F_{V_A}=0$ and $F_{H_A}+2$ kN $=0$
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_3.pdf}
+  \end{center}
+Taking moment about point $A$ we find that $2 \times 2$ kN $ - 2 \times F_{V_{C}}=0$ and so clearly $F_{V_{C}}=2$ kN. Using our vertical force balance we can now find that $F_{V_{A}}=-2$ kN.
+}}
+    \item{ Redraw the diagram for the truss with the values of the reaction
       forces and label the tensions in each rod as $T_{AB}$, $T_{BC}$ and
       $T_{AC}$. Now use the method of joints (force balance at each joint) to
-      find the tensions in each of the rods.
+      find the tensions in each of the rods.\A{\\
+We can redraw the daigram with the values of the reaction forces added
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_4.pdf}
+  \end{center}
+Which is perhaps more clear when we draw all forces in their ``positive'' direction.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_5.pdf}
+  \end{center}
+With the external forces found we can now analyse each joint.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_A.pdf}
+  \end{center}
+Clearly, $T_{AB}+F_{V_{A}}=0$, so $T_{AB}=2$ kN.  $T_{AC}+F_{H_{A}}=0$, so $T_{AC}=2$ kN.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_B.pdf}
+  \end{center}
+For point $B$ we have $T_{AB}+T_{BC}\mathrm{sin}(45)=0$, and $2$ kn $+T_{BC}\mathrm{sin}(45)=0$ from which it is easy to find that $T_{BC}=-2/ \mathrm{sin}(45)$ kN.
+ \begin{center}
+    \includegraphics[scale=1.5]{triangle_soln_C.pdf}
+  \end{center} 
+At point $C$ we can find that $T_{AC}+T_{BC}\mathrm{sin}(45)=0$ and $F_{V_{C}}+T_{BC}\mathrm{sin}(45)=0$. Therefore, $T_{BC}=-2/ \mathrm{sin}(45)$ kN. }}
   \end{enumerate}
 }
 
@@ -25,6 +61,31 @@
   \begin{center}
     \includegraphics[scale=1.5]{mj_1.pdf}
   \end{center}
+.\A{\\
+We can begin by looking at the joints at $A$ and $D$ at what kind of forces they can exert. The possible external forces are shown in the following figure.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_1.pdf}
+  \end{center}
+Treating the truss as a single particle we can draw a free body force diagram. From this we can find the vertical and horizontal force balance equations. $F_{V_{A}}+F_{V_{D}} - 400$ kN $ -  600\mathrm{sin}(30)$ kN $=0$ and $F_{V_{D}}+ 600 \mathrm{cos}(30)$ kN $=0$. Immediately, we know that  $F_{V_{D}}=- 600 \mathrm{cos}(30)$ kN $=0$.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_2.pdf}
+  \end{center}
+Let us now look at the moments. It is perhaps easiest to take these about $D$. If we take the lengths $AC$ (and $CD$) to be $L$. The moment balance gives $2L\times F_{A_{V}}-L \times 400$ kN $=0$. For this, we find that $F_{A_{V}}=200$ kN. Substituting this result into our previous equations we can find  $F_{V_{D}}=  400$ kN $ +  600\times \mathrm{sin}(30)$ kN $- 200$ kN.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_3.pdf}
+  \end{center}
+Now, since we have found the external forces we can now investiagte each joint. Starting with joint $A$ we find that $F_{V_{A}}+T_{AB}\mathrm{sin}(30)=0$, and so $T_{AB}=-200/\mathrm{sin}(30)$ kN. Furthermore, we can find that $T_{AB}\mathrm{cos}(30) + T_{AC}=0$ and so $T_{AC}=200 \mathrm{cot}(30)$ kN.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_A.pdf}
+  \end{center}
+Now, looking at point $B$: $T_{AB} \mathrm{cos}(30)=(T_{BD}+600) \mathrm{cos}(30)$. From which we can find $T_{BD}=(T_{AB}-600)=-600 -200/\mathrm{sin}(30)$ kN. We could find $T_{BC}$ from the vertical balance at $B$. However, it perhaps easier to find this from the vertical balance at $C$.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_B.pdf}
+  \end{center}
+The force balance equations are simple to find: $T_{BC}-400$ kN $=0$ and $T_{CD}-T_{AC}=0$. Therefore, $T_{BC}=400$ kN and $T_{CD}=200 \mathrm{cot}(30)$ kN.
+ \begin{center}
+    \includegraphics[scale=1.5]{mj_1_soln_C.pdf}
+  \end{center} }
 }
 
 \multiproblem{0.2}{
@@ -46,7 +107,23 @@
   \newline
   \begin{center}
     \includegraphics[scale=1.5]{ms_1.pdf}
+  \end{center}\A{\\
+ \begin{center}
+    \includegraphics[scale=1.5]{ms_1_soln_1.pdf}
   \end{center}
+ \begin{center}
+    \includegraphics[scale=1.5]{ms_1_soln_2.pdf}
+  \end{center}
+ \begin{center}
+    \includegraphics[scale=1.5]{ms_1_soln_3.pdf}
+  \end{center}
+ \begin{center}
+    \includegraphics[scale=1.5]{ms_1_soln_4.pdf}
+  \end{center}
+ \begin{center}
+    \includegraphics[scale=1.5]{ms_1_soln_5.pdf}
+  \end{center}
+}
 }
 
 \multiproblem{0.4}{
