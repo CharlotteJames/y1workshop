@@ -139,7 +139,7 @@
               & \text{for } \frac{L}{2} < x \leq L
         \end{cases}
     \]
-    and it we can easily see that $V(L) = 0$ and $M(L) = 0$ as expected.
+    and we can easily see that $V(L) = 0$ and $M(L) = 0$ as expected.
   }
 }
 
@@ -239,10 +239,48 @@
   \begin{enumerate}
     \item Find the reaction forces at the two supports resulting from the
       large weight at the end of the beam (assume the beam has zero mass).
+      \A{
+        Force balance gives that $R_A+R_B = mg$. Taking moments around the
+        middle support ($B$) gives that $mgL + R_A d = 0$ so we have $R_A =
+        -\frac{mgL}{d}$ and $R_B = mg\left(1 + \frac{L}{d}\right)$.
+      }
     \item Find shear stress and bending moment throughout the length of the
       beam.
+      \A{
+        Divide into $x < d$ and $d < x < d + L$. For $x < d$ we have $V'(x)=0$
+        so $V(x) = C_1 = R_A = -\frac{mgL}{d}$ so $V_-(0) = -\frac{mgL}{d}$. The
+        point force at $B$ gives us that $V_-(0) = V_+(0) + R_B$ so $V_+(0) =
+        mg$. We also have $V'(x)=0$ for $x > d$ so this gives
+        \[
+          V(x) =
+          \begin{cases}
+            -\frac{mgL}{d} & \text{for } 0 < x < d \\
+            mg             & \text{for } d < x < d + L \\
+          \end{cases}
+        \]
+        which satisfies the BC at the right hand side ($V(d+L) = mg$).
+      }
+
+      \A{
+        The bending moment is given by $M'(x) = V(x)$ with $M(0) = M(d+L)=0$
+        so we have
+        \[
+          M(x) =
+          \begin{cases}
+            -\frac{mgL}{d}x & \text{for } 0 < x < d \\
+            mg(x-d-L)             & \text{for } d < x < d + L \\
+          \end{cases}
+        \]
+      }
     \item Repeat the calculations taking account of the weight of the beam.
       Assume it has mass $m_b \neq 0$.
+      \A{
+        Force balance now gives $R_a+R_B = (m + m_b) g$. Moment balance around
+        $A$ gives
+        \[
+          dR_A + mg L + m_B g \frac{L - d}{2}
+        \]
+      }
   \end{enumerate}
 }
 
