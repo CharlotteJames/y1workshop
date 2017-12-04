@@ -23,6 +23,7 @@ worksheets = [
     'force_balance',
     'planar_statics',
     'trusses',
+    'beams',
     'entropy',
     'logic',
 ]

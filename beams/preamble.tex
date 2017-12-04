@@ -1,0 +1,62 @@
+This worksheet looks at forces and moments arising from distributed forces as
+well as the shear stress and bending moment of a long beam subject to load.
+
+Let's first consider the example shown here
+\begin{center}
+  \includegraphics{weight.pdf}
+\end{center}
+which shows a beam connected to a wall with a distributed force of
+$2.5\,\mathrm{kN/m}$ applied along its length. As an example this distributed
+load could be the weight of the beam. If the mass of the beam is
+approximately 1~metric~ton then it will have a total weight of
+$10\,\mathrm{kN}$. Since this is applied uniformly along the length of the
+beam and the beam is $4\,\mathrm{m}$ long this is a distributed force of
+constant magnitude $w(x) = 2.5\,\mathrm{kN/m}$.
+
+We now want to find the reaction force and moment at point $A$ where the beam
+is connected to the wall. We do force and moment balance (around $A$) just as
+for point forces but in order to calculate the total force and moment from the
+distributed forces we need to integrate the force density $w(x)$. We therfore
+have that
+\[
+  R_A = \int_0^4 w(x)\,dx = \int_0^4 2.5\,dx = \left[2.5x\right]_0^4 =
+  10\,\mathrm{kN}.
+\]
+To calculate the moment applied by the wall on the beam we can do moment
+balance around $A$. Again we find the moment of the distributed force using
+integration
+\[
+  M_A = -\int_0^4 x w(x)\,dx
+      = -\int_0^4 2.5 x\,dx
+      = -\left[2.5\,\frac{x^2}{2}\right]_0^4
+      = -20\,\mathrm{kNm}.
+\]
+Note that these are the same answers we would have found from a point force of
+$10\,\mathrm{kN}$ acting at the centre of the beam. This is generally true of
+the \emph{weight} force: for the purposes of force and moment balance we can
+treat the weight as a point force acting at the \emph{centre of mass}
+(assuming that we know where that is). In order to find the shear stress and
+bending moment we need to work with the distributed force though.
+
+The shear stress~$V(x)$ can be thought of as either the total downwards force
+acting on the beam to the right of~$x$ or the total upward force acting to the
+left of~$x$ (since these muct be equal in equilibrium). It satisfies the
+differential equation $\dydx{V}{x} = -w(x)$. We can see that the boundary
+conditions are $V(0) = R_A$ and $V(4) = 0$. Hence
+\[
+  V(x)
+    = -\int w(x)\,dx
+    = -2.5x + C
+    = 10\,\mathrm{kN} - 2.5\,\mathrm{kN/m}\times x.
+\]
+The bending moment $M(x)$ can be thought of as the moment required to balance
+all moments to the right of $x$ or to the left of $x$. It is clear then that
+$M(0) = M_A$ and $M(4)=0$. Since $M(x)$ satisfies $\dydx{M}{x} = V(x)$ we have
+that
+\[
+  M(x)
+    = \int V(x)\,dx
+    = 10x - 1.25x^2 + C
+    = 10\,\mathrm{kN}\times x - 1.25\,\mathrm{kN/m}\times x^2 -
+    20\,\mathrm{kNm}.
+\]
