@@ -280,6 +280,48 @@
         \[
           dR_A + mg L + m_B g \frac{L - d}{2}
         \]
+        so we have
+        \[
+          R_A = -mg\frac{L}{d} + \frac{1}{2} m_B g \left(1-\frac{L}{d}\right)
+            ,\quad\quad
+          R_B = \left(mg + \frac{1}{2}m_B g\right)\left(1 + \frac{L}{d}\right).
+        \]
+      }
+
+      \A{
+        The distributed weight gives $w(x) = \frac{m_B}{L+d}g$. The shear
+        stress on the left is given by $V'(x) = w(x)$ with BCs $V(0)=R_A$ and
+        $V(d + L) = mg$. So for $x < d$ we have
+        \[
+          V(x) = - m_B g \frac{x}{L+d} + C_1
+               = - m_B g \frac{x}{L+d} - mg\frac{L}{d}
+               + \frac{1}{2} m_B g \left(1-\frac{L}{d}\right)
+        \]
+        which gives that $V_-(d) = m_B g \left(-\frac{d}{L+d} +
+        \frac{1}{2}(1-\frac{L}{d})\right)  -mg\frac{L}{d}$. The BC across the
+        reaction force is found with
+        \[
+          V_+(d) = V_-(d) + R_B = mg + m_Bg\frac{L}{d + L}
+        \]
+        For $x > d$ we have
+        \[
+          V(x) = - m_B g \frac{x}{L+d} + C_2
+               = - m_B g \frac{x}{L+d} + mg + m_Bg
+               = m_B g \left(1 - \frac{x}{L+d}\right) + mg
+        \]
+        Finally this gives
+        \[
+          V(x) =
+            \begin{cases}
+               - m_B g \frac{x}{L+d} - mg\frac{L}{d}
+               + \frac{1}{2} m_B g \left(1-\frac{L}{d}\right)
+                          & \text{for } 0 < x < d \\
+               m_B g \left(1 - \frac{x}{L+d}\right) + mg
+                                        & \text{for } d < x < d + L
+            \end{cases}.
+        \]
+        and it is easy to verify that this satisfies the boundary condition at
+        the right-hand side that $V(d+L) = mg$.
       }
   \end{enumerate}
 }
@@ -290,4 +332,26 @@
   \begin{center}
     \includegraphics{bridge.pdf}
   \end{center}
+  \A{
+    First label left and right hand supports as $A$ and $B$ respectively. Then
+    symmetry and force balance gives that $R_A = R_B = \frac{mg}{2}$. The
+    shear stress is given by
+    \[
+      V(x) =
+        \begin{cases}
+          \frac{1}{2}mg & \text{for } 0 < x < \frac{L}{2} \\
+          -\frac{1}{2}mg & \text{for } \frac{L}{2} < x < \frac{L}{2}
+        \end{cases}.
+    \]
+    which satisfies both $V(0) = R_A$ and $V(L) = -R_B$. The bending moment is
+    therefore given by
+    \[
+      M(x) =
+        \begin{cases}
+          \frac{1}{2}mgx & \text{for } 0 < x < \frac{L}{2} \\
+          \frac{1}{2}mg(L-x) & \text{for } \frac{L}{2} < x < \frac{L}{2}
+        \end{cases}
+    \]
+    which satisfies $M(0) = M(L) = 0$.
+  }
 }
