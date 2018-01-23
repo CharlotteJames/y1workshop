@@ -23,7 +23,8 @@ worksheets = [
     'force_balance',
     'planar_statics',
     'trusses',
-    'entropy', 
+    'entropy',
+    'suvat', 
 ]
 
 class NotInstalledError(Exception):
