@@ -1,0 +1,107 @@
+
+
+
+\multiproblem{huh}{
+\begin{enumerate}
+\item{A particle accelerates uniformly from rest, so that after 10 seconds it has achieved a speed of 15 ms$^{-1}$.
+\begin{enumerate}
+\item {Find the acceleration of the particle\A{ } }
+\item{Find the distance covered}
+\end{enumerate} }
+\item{The particle then decelerates uniformly to rest, covering another 45 m in the process.
+\begin{enumerate}
+\item Find the speed as a function of the distance covered for the whole journey (accelerating and decelerating).
+\item Plot this function
+\end{enumerate}
+}
+\end{enumerate}}
+
+
+\multiproblem{huh2}{ A projectile is fired off a a cliff of height 5 m at a speed of 5 ms$^{-1}$
+\begin{figure}[htbp]
+\centering
+\includegraphics[]{cliff.eps}
+\end{figure}
+		\begin{enumerate}
+    		\item{ 	At what angle from the horizontal $\alpha$ must he projectile be fired in order for it to land 5m from the base of the cliff\A{}}
+    \item{Sketch the trajectory/trajectories found in (a)\A{ \begin{figure}[htbp]
+\centering
+\includegraphics[]{cliff_traj.eps}
+\end{figure}}}
+    \item{ At what angle must the projectile be fired in order to be in the air for 1 second?\A{kk}}
+\item{Find an expression for the distance of the projectile from its initial position as a function of time $t$} 
+  \end{enumerate}}
+
+
+\multiproblem{huh3}{ 
+A projectile is fired off a a cliff of height $h$, onto a hill, with an initial velocity of $$\underline{u}=(u,0)^{\mathrm{T}} \mathrm{ms}^{-1}$$
+\begin{figure}[htbp]
+\centering
+\includegraphics[]{cliff_hill.eps}
+\end{figure}
+		\begin{enumerate}
+    		\item{ 	Show that the time in the air is $$T=\frac{-u+\sqrt{u^2+2gh}}{g}$$\A{}}
+    \item{Using the previous result, find the position at which the projectile hits the slope as a function of $h,u$ and $g$.\A{Since the truss is in static equilibrium leads us to the following equations:
+$F_{V_C}+F_{V_A}=0$ and $F_{H_A}+2$ kN $=0$
+Taking moment about point $A$ we find that $2 \times 2$ kN $ - 2 \times F_{V_{C}}=0$ and so clearly $F_{V_{C}}=2$ kN. Using our vertical force balance we can now find that $F_{V_{A}}=-2$ kN.
+}}
+    \item{ What are the limit of this position as $u\to \infty$ and $u\to 0$\A{\\
+}}
+\item{Find an expression for the distance of the projectile from its initial position as a function of time $t$} 
+  \end{enumerate}}
+
+
+
+\multiproblem{huh4}{ I am throwing a ball up to a friend on top of a roof 20 m above me.
+\begin{enumerate}
+\item{What is the minimum initial velocity with which I can throw the ball, so that it reaches my friend?}
+\item{I now need the ball to reach my friend within 1 second. What is the minimum initial velocity with which I can throw the ball now? \A{}}
+\item{If my friend misses the first opportunity to catch the ball, how long is it before they get another chance?}
+\item{How quickly would I have to throw the ball to reach my friend if they were at a height $h$ in order to reach them within 1 second?}
+\item{At what time after I have thrown the ball would it pass them a second time if they missed the first catch?} 
+\end{enumerate}}
+
+
+
+\multiproblem{huh5}{  This question deals with deriving the SUVAT equations. In general the differential equations relating displacement, velocity and acceleration of a body are given by $\frac{ds(t)}{dt}=v(t)$, and $\frac{dv(t)}{dt}=a(t)$.
+
+\begin{enumerate}
+\item Using these, and the fact that we are modeling a situation where the acceleration is constant, derive an expression for $v(t)$ and one for $s(t)$ by integration. (Your solutions will look slightly different to S(1) and S(2), briefly explain this difference).
+
+\item Using your answers from (a), derive S(5).
+
+\item Using separation of variables, show that the area under a velocity-time plot (the graph of $v(t)$) is equal to the displacement. Is this result valid even for non-constant acceleration?
+
+\item Constant acceleration implies constant gradient on a velocity-time plot, use this and a sketch to verify S(3).
+
+\item From Newton's First Law, constant acceleration implies constant force acting on the body. Write down expressions for work done and kinetic energy, and hence derive S(4). (You will need to use the fact that work done is equal to the change in kinetic energy)
+\end{enumerate}}
+
+\multiproblem{huh6}{ 
+\begin{enumerate}
+\item In an experiment I drive a car, mass $m$, from stationary to a flag 20m away applying constant acceleration of 4\mpssq. Find the time $t^*$ it takes me to reach the flag.
+
+\item I repeat the experiment, but this time I see a hazard in the distance at time $\tau<t^*$ and immediately apply constant deceleration. Find an expression for $F$, the force required to bring the car to a stop at the flag, as a function of $\tau$. Sketch the graph of $F(\tau)$.
+
+\item In another experiment, I drop a coin down a well which has a depth of 75\metres. Assuming the speed of sound is 300\mps, find the time at which I hear the coin hit the bottom. 
+\end{enumerate}}
+
+
+\multiproblem{huh7}{  This question concerns a popular firework device which can fire fireworks out at any angle to the horizontal. We treat these fireworks as projectiles with initial speed $u$ under acceleration due to gravity $g$. We want to find an analytic expression for the boundary of the `safe area', where no firework can reach.
+\begin{enumerate}
+\item Write down $\mathbf{u}=(u_x,u_y)$, the firework's initial velocity as an expression in $\theta$, the angle at which the firework is fired from.
+\item If $\big(s_x(t), s_y(t)\big)$ is a firework's position at time $t$, show that the graph of a firework's trajectory is
+\begin{equation}
+	\label{eq:s_y}
+	s_y = s_x \tan\theta - \frac{s_x^2g}{2v^2}\big(1+\tan^2\theta\big).
+\end{equation}
+
+\textit{Hint: Begin by finding $s_x$ and $s_y$ and then relate them by explicitly eliminating $t$.}
+
+\item Equation \ref{eq:s_y} is the family of all possible firework trajectories. You can think of it as $s_y$ as a function of $s_x$, parametrised by a choice of $\theta\in[0,\pi]$. In other words for a particular choice of $\theta$, the graph of $s_y(s_x)$ is that firework's trajectory. Now, we want to maximise this set over $\theta$. Find $\frac{\partial s_y}{\partial \theta}$ and hence find the maximal $s_y$ position for any given $s_x$ position.
+
+\textit{Hint: Instead, use the substitution $z=\tan\theta$ and maximise $s_y(s_x)$ with respect to $z$. Bonus question: think why this substitution is allowed by considering the graph of $\tan(\theta)$.}
+
+\item  Sketch the safe area boundary that you have found.
+
+\end{enumerate}}
