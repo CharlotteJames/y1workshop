@@ -8,23 +8,25 @@ import subprocess
 import argparse
 
 worksheets = [
-    'complex_algebra', 
-    'dynamics', 
-    'eigenvalues_and_eigenvectors', 
-    'groups', 
-    'linear_systems', 
-    'odes', 
+    'complex_algebra',
+    'dynamics',
+    'eigenvalues_and_eigenvectors',
+    'groups',
+    'linear_systems',
+    'odes',
     'odes_linear_operators',
-    'probability', 
-    'proof_techniques', 
-    'proof_by_induction', 
-    'random_variables', 
-    'sets_of_solutions', 
+    'probability',
+    'proof_techniques',
+    'proof_by_induction',
+    'random_variables',
+    'sets_of_solutions',
     'force_balance',
     'planar_statics',
     'trusses',
     'entropy',
     'suvat', 
+    'beams',
+    'logic',
 ]
 
 class NotInstalledError(Exception):
@@ -38,7 +40,7 @@ def run_command(cmdline, options,**kwargs):
     print("     Running %s" % cmdline)
     print("---------------")
     try:
-        subprocess.check_call(cmdline, shell=True, **kwargs)
+        subprocess.check_call(cmdline, **kwargs)
     except FileNotFoundError:
         message = "Subcommand failed: is '%s' installed and on PATH?"
         raise NotInstalledError(message % (cmdline[0],))
