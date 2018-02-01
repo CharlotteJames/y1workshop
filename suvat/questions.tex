@@ -2,20 +2,44 @@
 
 
 \multiproblem{huh}{
-\begin{enumerate}
-\item{A particle accelerates uniformly from rest, so that after 10 seconds it has achieved a speed of 15 ms$^{-1}$.
-\begin{enumerate}
-\item {Find the acceleration of the particle\A{ } }
-\item{Find the distance covered}
-\end{enumerate} }
-\item{The particle then decelerates uniformly to rest, covering another 45 m in the process.
-\begin{enumerate}
-\item Find the speed as a function of the distance covered for the whole journey (accelerating and decelerating).
-\item Plot this function
-\end{enumerate}
+  \begin{enumerate}
+    %
+	%
+	\item A particle accelerates uniformly from rest, so that after 10 seconds it has achieved a speed of 15 ms$^{-1}$.
+      \begin{enumerate}
+        \item {Find the acceleration of the particle\A{ $a=\frac{v-u}{t}=\frac{15-0}{10}=1.5$ ms$^{-2}$} }
+        \item{Find the distance covered\A{ $s=\frac{1}{2}(u+v)t=\frac{1}{2}(15)10=74$ m}}
+      \end{enumerate}
+    %
+	%
+	\item
+	  The particle then decelerates uniformly to rest, covering another 45 m in the process.
+      \begin{enumerate}
+        \item Find the speed as a function of the distance covered for the whole journey (accelerating and decelerating)
+          \A{\\ For the first part of the journey $v(s)^2=u^2+2as$,
+		    so $v(s)=\sqrt{3S}$ for $0\leq s \leq 75$.\\
+            For the second part of the journey $v_2^2=u_2^2+2a_2s_2$,
+		    $a_2=\frac{v_2^2-u_2^2}{2s_2}=\frac{-15^2}{90}$, $s_2=45$ m.\\
+            so $v(s)^2=u_2^2+2a_2 (s-75)$. Rearranging, $v(s)=\sqrt{600-2s}$ for $75<s\leq120$.
+		    So
+		    $$v(s)=
+		      \begin{cases} 
+                \sqrt{3s} & 0\leq s\leq 75 \\
+                \sqrt{600-2s} & 75< s\leq 120
+              \end{cases}.
+            $$
+		  }
+        \item Plot this function
+		  \A{\\
+            \begin{center}
+              \includegraphics[scale=0.3]{v(s).eps}
+            \end{center}
+		  }
+      \end{enumerate}
+	%
+    %	
+  \end{enumerate}
 }
-\end{enumerate}}
-
 
 \multiproblem{huh2}{ A projectile is fired off a a cliff of height 5 m at a speed of 5 ms$^{-1}$
 \begin{figure}[htbp]
@@ -23,13 +47,27 @@
 \includegraphics[]{cliff.eps}
 \end{figure}
 		\begin{enumerate}
-    		\item{ 	At what angle from the horizontal $\alpha$ must he projectile be fired in order for it to land 5m from the base of the cliff\A{}}
+    		\item{ 	At what angle from the horizontal $\alpha$ must the projectile be fired in order for it to land 5m from the base of the cliff?\A{\\
+			$\underline{s}=(5,-5)^{T}$, $\underline{u}=(5\cos \alpha,5\sin \alpha)^{T}$ and $\underline{a}=(0,-g)^{T}$. If we use S(2) vertically and horizontally we can solve for $\alpha$\\
+			Horizontally:\\
+			$s_x=5=5 \cos \alpha t$, so $t=\sec \alpha$ \\
+			Vertically:\\
+			$s_y=-5=5\sin \alpha t -\frac{1}{2}g t^2$\\
+			Substituting our result for $t$:
+			$-5=5\sin \alpha \sec \alpha -\frac{1}{2}g \sec^2 \alpha$\\
+			$-5=5 \tan \alpha -5 \sec^2 \alpha=5 \tan \alpha -5 (1+\tan^2 \alpha)$\\
+			$0=\tan \alpha-\tan^2 \alpha$\\
+			So either $\tan \alpha=0$ or $\tan \alpha =1$, meaning $\alpha=0$ or $\alpha=45^o=\pi/4$ radians respectively.}}
     \item{Sketch the trajectory/trajectories found in (a)\A{ \begin{figure}[htbp]
 \centering
 \includegraphics[]{cliff_traj.eps}
 \end{figure}}}
-    \item{ At what angle must the projectile be fired in order to be in the air for 1 second?\A{kk}}
-\item{Find an expression for the distance of the projectile from its initial position as a function of time $t$} 
+    \item{ At what angle must the projectile be fired in order to be in the air for 1 second?\A{\\We can simply look at the projectile vertically, $s_y=-5=5\sin\alpha \times 1 -\frac{1}{2}g \times 1$. So
+	$0=\sin \alpha$. Looking at the configuration, the correct solution is $\alpha=0$}}
+\item{For general $\alpha$ find an expression for the distance of the projectile from its initial position as a function of time $t$\A{\\
+$s_x=5t\cos \alpha$ and $s_y=5t\sin \alpha - 5t^2$. The distance can be found by $d=\sqrt{s_x^2+s_y^2}$\\
+$d=\sqrt{25t^2 \cos^2 \alpha + 25t^2 \sin^2 \alpha - 50 t^3 \sin \alpha +25t^4}$\\
+$d=5t\sqrt{1 - 2t \sin \alpha +t^2}$ for $t\geq0$}} 
   \end{enumerate}}
 
 
@@ -40,12 +78,30 @@ A projectile is fired off a a cliff of height $h$, onto a hill, with an initial 
 \includegraphics[]{cliff_hill.eps}
 \end{figure}
 		\begin{enumerate}
-    		\item{ 	Show that the time in the air is $$T=\frac{-u+\sqrt{u^2+2gh}}{g}$$\A{}}
-    \item{Using the previous result, find the position at which the projectile hits the slope as a function of $h,u$ and $g$.\A{Since the truss is in static equilibrium leads us to the following equations:
-$F_{V_C}+F_{V_A}=0$ and $F_{H_A}+2$ kN $=0$
-Taking moment about point $A$ we find that $2 \times 2$ kN $ - 2 \times F_{V_{C}}=0$ and so clearly $F_{V_{C}}=2$ kN. Using our vertical force balance we can now find that $F_{V_{A}}=-2$ kN.
-}}
+    		\item{ 	Show that the time in the air is $$T=\frac{-u+\sqrt{u^2+2gh}}{g}$$\A{The vertical displacement is given by $s_y=-\frac{1}{2}gt^2$ the horizontal $s_x=ut$\\
+			We know that at the impact at $t=T$, $s_y=h-s_x$, so\\
+			(1) $s_x=uT$\\
+			(2) $s_x-h=-\frac{1}{2}gT^2$\\
+			(1)-(2) $h=uT+\frac{1}{2}gT^2$\\
+			Solving,we find $$T=\frac{-u\pm\sqrt{u^2 +2gh}}{g}$$\\
+			We want the positive time solution so $$T=\frac{-u+\sqrt{u^2 +2gh}}{g}$$
+			}}
+    \item{Using the previous result, find the position vector at which the projectile hits the slope as a function of $h,u$ and $g$.\A{\\We found that $s_x=ut$ so at impact$$s_x=uT=\frac{-u^2+u\sqrt{u^2 +2gh}}{g}$$\\
+	Furthermore, on the slope, we have that $$s_y=s_x-h=\frac{-u^2+u\sqrt{u^2 +2gh}}{g}-h$$So the position vector  is given by 
+	$$\underline{p}_I=\left(\frac{-u^2+u\sqrt{u^2 +2gh}}{g},\frac{-u^2+u\sqrt{u^2 +2gh}}{g}-h\right)^T$$}}
     \item{ What are the limit of this position as $u\to \infty$ and $u\to 0$\A{\\
+	This can either be found by intuition or mathematically finding the limits.\\
+	Intuitively, as $u\to \infty$ the time taken to reach the slope tends to zero, and so the distance the projectile falls tends to zero (at a faster rate $s_y=\mathcal{O}(t^2)$). Therefore we can deduce that the position vector $\underline{p}\to (h,0)^T$.\\
+	As $u\to 0$ the projectile can be considered as simply falling vertically, and so the distance the projectile travels horizontally tends to zero. We know that $s_y=s_x-h$, therefore we can deduce that the position vector $\underline{p}\to (0,-h)^T$.\\
+	Mathematically, the limit as $u\to 0$ can also be found in a few ways. We can find that the limit as $T\to0$ is finite $\sqrt{2h/g}$ and so $s_x=uT\to0$. We can then trivially find $\underline(p)\to(-h,0)^T$.
+	The limit as $u\to \infty$ is far harder. Let us start by rearranging $$s_x=\frac{-u^2+u\sqrt{u^2 +2gh}}{g}=\frac{u^2}{g}\left(-1+\sqrt{1+\frac{2gh}{u^2}}\right)$$
+	Now we need the expansion $$(1+z)^a=1+az+\frac{a(a-1)}{2!}z^2+...$$
+	In the case where $a=\frac{1}{2}$
+	$$(1+z)^\frac{1}{2}=1+\frac{1}{2}z-\frac{1}{8}z^2+...$$
+	So
+	$$s_x=\frac{u^2}{g}\left(-1+\left(1+\frac{1}{2}\frac{2gh}{u^2}-\frac{1}{8}\left(\frac{2gh}{u^2}\right)^2+...\right)\right)$$
+	$$s_x=h-\frac{gh^2}{4u^2}+\mathcal{O}(u^{-4})...$$
+	Therefore, the limit as $u\to\infty$ of $s_x=h$.
 }}
 \item{Find an expression for the distance of the projectile from its initial position as a function of time $t$} 
   \end{enumerate}}
@@ -58,7 +114,7 @@ Taking moment about point $A$ we find that $2 \times 2$ kN $ - 2 \times F_{V_{C}
 \item{I now need the ball to reach my friend within 1 second. What is the minimum initial velocity with which I can throw the ball now? \A{}}
 \item{If my friend misses the first opportunity to catch the ball, how long is it before they get another chance?}
 \item{How quickly would I have to throw the ball to reach my friend if they were at a height $h$ in order to reach them within 1 second?}
-\item{At what time after I have thrown the ball would it pass them a second time if they missed the first catch?} 
+\item{If my friend misses the first catch, how long before they have another opportunity to catch it now?} 
 \end{enumerate}}
 
 
