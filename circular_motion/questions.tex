@@ -1,0 +1,157 @@
+%
+% Circular motion
+%
+
+\multiproblem{angular}{
+  We can represent the orientation of a rotating object or the angular
+  position of a particle with an angle~$\theta$. In this case the time
+  derivative of the angle $\dot{\theta} = \omega$ is known as the \emph{scalar
+  angular velocity}.
+  \begin{enumerate}
+    \item What units might we use for $\omega$?
+    \item For circular motion at constant amgular velocity we have $\theta =
+      \omega t + \theta_0$. We define $T$ to be the time taken to complete a
+      full circle.  We also define the frequency $f$ as $\frac{1}{T}$ which
+      gives the number of rotations completed in one time unit. Given that one
+      full rotation corresponds to $\theta \to \theta + 2\pi$ find $\omega$ in
+      terms of $f$ and in terms of~$T$.
+    \item When an object moves an angle $\theta$ around a circle the arclength
+      of the path is given by $R\theta$. Hence find the relationship
+      between the linear speed $v$ and $\omega$.
+    \item Estimate the angular velocity (using appropriate units for time) of
+      \begin{enumerate}
+        \item A record player spinning at $45\,\mathrm{rpm}$.
+        \item The wheel of a car travelling at $60\,\mathrm{mph}$.
+        \item The wheel of a skateboard travelling at $10\,\mathrm{mph}$.
+        \item The rotation of the Earth (1 sidereal day is $\approx
+          23\mathrm{h}56\mathrm{m}$).
+        \item The orbital movement of the Earth (1 year $\approx
+          365.25\,\mathrm{days}$).
+      \end{enumerate}
+    \item Estimate the speed~$v$ due to rotation of a point on the surface of the
+      Earth at the equator given that the Earth has a radius of $\approx
+      6700\,\mathrm{km}$.
+    \item What is the speed~$v$ of the centre of the Earth due to orbital
+      motion around the Sun (distance is $\approx 150\times
+      10^6\,\mathrm{km}$).
+  \end{enumerate}
+}
+
+\multiproblem{circular}{
+  \label{circular}
+  The diagram on the front page shows the standard plane polar coordinate
+  system. A particle moves in uniform circular motion of radius $R$ around the
+  origin with angular velocity $\omega$.
+  \begin{enumerate}
+    \item Look at the diagram at the start of this worksheet and convience
+      yourself that
+      \[
+        x = r\cos{\theta},\quad y = r\sin{\theta}
+      \]
+      where $r = |\mathbf{r}|$ and $\theta$ is as shown.
+    \item Find $\theta$ in terms of time $t$ if the particle starts on the
+      $x$-axis at $x=R$.
+    \item Hence find the position vector $\mathbf{r} = x\mathbf{i} +
+      y\mathbf{j}$ in terms of $\omega$, $t$ and $R$. Verify that
+      $|\mathbf{r}|=R$ as expected for circular motion.
+    \item Hence find the velocity and acceleration vectors $\mathbf{v}$ and
+      $\mathbf{a}$ in terms of $\omega$, $t$ and $R$.
+    \item Show that the acceleration is always in the opposite direction to
+      the displacement, and perpendicular to the velocity.
+    \item Find $v = |\mathbf{v}|$ in terms of $\omega$ and $R$.
+    \item Find $a = |\mathbf{a}|$ in terms of $\omega$ and $R$ and also in terms
+      of $v$ and $R$.
+  \end{enumerate}
+}
+
+\multiproblem{polar}{
+  Look at the diagram for polar coordinates at the start of this worksheet and
+  at the two unit vectors.  When describing the motion of a particle in polar
+  coordinates we use $r$ and $\theta$ to specify a position. At any particular
+  position of the particle we can define the two unit vectors $\mathbf{e}_r$
+  and $\mathbf{e}_\theta$.  These two unit vectors are functions of~$\theta$
+  and therefore change with time as the particle moves.
+  \begin{enumerate}
+    \item Show using trigonometry that the radial unit vector $\mathbf{e}_r$
+      can be written in terms of the Cartesian unit vectors as
+      \[
+        \mathbf{e}_r = \cos{\theta}\mathbf{i} + \sin{\theta}\mathbf{j}
+      \]
+    \item Hence show that the position vector satisfies $\mathbf{r} =
+      r\mathbf{e}_r$.
+    \item Using trigonometry find a similar formula for $\mathbf{e}_\theta$.
+    \item Show that
+      \[
+        \mathbf{e}_r \cdot \mathbf{e}_\theta = 0
+            ,\quad\quad
+        \mathbf{e}_r \times \mathbf{e}_\theta = \mathbf{k}
+      \]
+    \item Remembering that the unit vectors depend on $\theta$ which in turn
+      depend on time~$t$ use the chain rule to show that
+      \[
+        \dot{\mathbf{e}}_r = \omega \mathbf{e}_\theta
+          ,\quad\quad
+        \dot{\mathbf{e}}_\theta = - \omega \mathbf{e}_r
+      \]
+    \item Hence differentiate $\mathbf{r}$ to show that
+      \[
+        \mathbf{v} = \dot{r}\mathbf{e}_r + r\omega\mathbf{e}_\theta
+      \]
+    \item Differentiate once more to show that
+      \[
+        \mathbf{a} = \left(\ddot{r} - r\omega^2\right)\mathbf{e}_r
+                  + \left(r\dot{\omega} +
+                  2\dot{r}\omega\right)\mathbf{e}_\theta
+      \]
+  \end{enumerate}
+}
+
+\multiproblem{cirpolar}{
+  Consider again a particle moving in a circle at constant speed $\omega$ but
+  this time using the polar coordinate equations from the previous question.
+  \begin{enumerate}
+    \item If the particle moves in a circle what can we say about $\dot{r}$
+      and $\ddot{r}$? If the speed is constant what can we say about
+      $\dot{\omega}$?
+    \item Hence simplify the equations for $\mathbf{v}$ and $\mathbf{a}$ for
+      the case of uniform circular motion.
+    \item Look back at question~\ref{circular} and try to answer the questions
+      using the $\mathbf{e}_r$ $\mathbf{e}_\theta$ instead of $\mathbf{i}$ and
+      $\mathbf{j}$.
+  \end{enumerate}
+}
+
+\multiproblem{accelerating} {
+  Suppose instead that the particle moves in a circle but starts from rest
+  at~$\theta=0$ and has a constant angular acceleration~$\alpha =
+  \dot{\omega}$.
+  \begin{enumerate}
+    \item Find $\omega$ and $\theta$ in terms of $t$ and $\alpha$.
+    \item Find $\mathbf{v}$ and $\mathbf{a}$ in polar coordinates and
+      interpret the terms in the resulting equations.
+  \end{enumerate}
+}
+
+\multiproblem{gravity}{
+  Suppose the origin is at the centre of the Earth. The force of gravity due
+  to the Earth acting on an object of mass $m$ is given by
+  \[
+    \mathbf{F} = -\frac{GM_e m}{r^2}\mathbf{e}_r
+  \]
+  where $G$ is the gravitational constant, $M_e$ is the mass of the Earth and
+  $r$ is the distance of the object from the centre of the Earth.
+  \begin{enumerate}
+    \item Given that at the surface of the Earth $|\mathbf{F}| = mg$ where $g\approx
+      10\,\mathrm{ms}^{-2}$ estimate $GM_e$.
+    \item A satellite is in circular low-Earth-orbit above the equator of the
+      Earth at an altitude of $400\,\mathrm{km}$ from the centre of the Earth.
+      Given that $\mathbf{F} = m\mathbf{a}$ find the angular velocity of the
+      satellite and hence show that its orbital period will be approximately
+      $100\,\mathrm{minutes}$.
+    \item Use similar methods to show Kepler's law for circular orbits: $T^2
+      \propto r^3$.
+    \item For a geostationary orbit the satellite should have an orbital
+      period of 1 sidereal day. What should the orbital altitude be in this
+      case?
+  \end{enumerate}
+}
