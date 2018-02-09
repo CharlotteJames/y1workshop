@@ -6,6 +6,7 @@ import os
 import os.path
 import subprocess
 import argparse
+import errno
 
 worksheets = [
     'complex_algebra',
@@ -43,7 +44,7 @@ def run_command(cmdline, options,**kwargs):
     try:
         subprocess.check_call(cmdline, **kwargs)
     except OSError as e:
-        if e.errno == os.ENOENT:
+        if e.errno == errno.ENOENT:
             message = "Subcommand failed: is '%s' installed and on PATH?"
             raise NotInstalledError(message % (cmdline[0],))
         else:
