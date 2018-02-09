@@ -25,7 +25,7 @@ worksheets = [
     'planar_statics',
     'trusses',
     'entropy',
-    #'suvat',
+    'suvat',
     'circular_motion',
     'beams',
     'logic',
