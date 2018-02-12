@@ -13,7 +13,7 @@
    height="59.673386"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="pdfs.svg">
   <sodipodi:namedview
      id="base"
@@ -28,11 +28,11 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
+     inkscape:window-width="958"
+     inkscape:window-height="1078"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -544,7 +544,7 @@
        y="148.95029" />
     <g
        id="g6782"
-       transform="translate(91.923882,86.834234)">
+       transform="translate(91.923882,86.472186)">
       <g
          id="g6784"
          transform="matrix(0.12188,0,0,-0.12188,-21.329,133.10287)"
@@ -564,7 +564,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g7192"
-       transform="translate(103.54064,86.76781)">
+       transform="translate(103.54064,86.405761)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
@@ -584,7 +584,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g7608"
-       transform="translate(73.265195,86.834234)">
+       transform="translate(67.709356,86.472186)">
       <g
          id="g7610"
          transform="matrix(0.12188,0,0,-0.12188,-21.329,133.10287)"
@@ -607,7 +607,7 @@
            inkscape:connector-curvature="0"
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
-       transform="translate(53.058279,86.867142)"
+       transform="translate(55.078584,86.505094)"
        id="g8464">
       <g
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:normal;word-spacing:normal;text-anchor:start;fill:none;stroke:#000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10.43299961;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
@@ -696,7 +696,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g6782-9"
-       transform="translate(30.797532,87.086772)">
+       transform="translate(30.797532,86.960503)">
       <g
          id="g6784-3"
          transform="matrix(0.12188,0,0,-0.12188,-21.329,133.10287)"
@@ -716,7 +716,7 @@
            style="fill:#000000;stroke-width:0" /></g>    </g>
     <g
        id="g9862"
-       transform="translate(-31.047435,86.834234)">
+       transform="translate(-31.047435,86.960503)">
       <g
          word-spacing="normal"
          letter-spacing="normal"
