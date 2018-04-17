@@ -14,10 +14,13 @@
 \multiproblem{1}{{\it suvat equations and work}\newline
 \begin{enumerate}
 \item Considering the work-energy theorem and Newton's 2nd law, ${\bf F} = m{\bf a}$, derive the suvat equation for the final velocity $v$ of a mass $m$ moving in $1$ dimension given its initial velocity $u$, acceleration $a$ and displacement $s$: $$v^2 = u^2 + 2as.$$
+%
 \A{$\Delta T = \frac{1}{2}mv^2 - \frac{1}{2}mu^2 = W = F\Delta r = mas \to  \frac{1}{2}mv^2 - \frac{1}{2}mu^2 = mas$}
+%
 \A{Re-arranging and dividing through by $m$: $v^2 = u^2 + 2as$}
 %
 \item Repeat the above for a particle moving in $2$ or $3$ dimensions.
+%
 \A{$\Delta T = \frac{1}{2}m|{\bf v}|^2 - \frac{1}{2}m|{\bf u}|^2 = 2{\bf a}\cdot{\bf s}$}
 \end{enumerate}
 }
@@ -73,14 +76,24 @@ Consider mass $m$ on a smooth slope at an angle $\alpha$ to the horizontal.
 %
 \item If the mass is released from position ${\bf r}(0) = (x_0,0,z_0)$ with initial velocity $v_0$, calculate its later position as a function of time, ${\bf r}(t)$.
 %
+%ANSWER
+\A{${\bf F}(t) = (0,0, -mg)$}
+\A{${\bf v}(t) = \int{\bf a}(t)dt + {\bf v}_0 = (0,0,-gt) + (v_0\cos\alpha, 0, -v_0\sin\alpha)$ }
+\A{${\bf r}(t) = \int{\bf v}(t)dt + {\bf r}(0) = (v_0t\cos\alpha, 0, -v_0t\sin\alpha - \frac{1}{2}gt^2) + (x_0,0,z_0)$}
+%
 \item Using the work-energy theorem, calculate the work done on the mass as it moves from ${\bf r}(0)$ to ${\bf r}(t)$.
 %
+%ANSWER
 \A{Using work-energy theorem, $W = \Delta T$}
 \A{$\Delta T = \frac{1}{2}m(|{\bf v}(t)|^2 - |{\bf v}(0)|^2)$}
 \A{$\Delta T = \frac{1}{2}m (v_0^2 + 2v_0gt \sin\alpha + (gt)^2 - v_0^2) =  \frac{1}{2}m (2v_0gt \sin\alpha + (gt)^2)$} 
 %
 \item In order to verify the work-energy theorem, calculate the work done on the mass as it moves from  ${\bf r}(0)$ to ${\bf r}(t)$ by explicit calculation (ie. $W = \int {\bf F}\cdot d{\bf r} \equiv \int {\bf F}\cdot {\bf v} dt$). 
 %
+%ANSWER
+\A{Can use either ${\bf v}(t)$ or ${\bf r}(t)$. If ${\bf v}(t)$ is used:}
+\A{$W = \int {\bf F}\cdot {\bf v} dt = m \int {\bf a}\cdot{\bf v} dt = m \int g v_0\sin\alpha + g^2t = m (gtv_0\sin\alpha + \frac{1}{2}(gt)^2$.
+}
 \end{enumerate}
 }
 
@@ -111,6 +124,16 @@ Consider a mass $m$ moving at velocity $v_0$ towards a rollercoaster loop of rad
 \begin{enumerate}
 \item Draw a free body diagram of the mass when it is at the top of the loop. 
 \item From your free body diagram, write down an inequality for the normal reaction, $N$, being exerted on the mass by the rollercoaster track.
-\item Using this inequality along with what you know about conservative forces, determine the minimum value of $v_1$, as a function of $g$ and $R$, which ensures the mass will not leave the track as it passes through the loop. 
+%
+\A{At the top of the loop, $N \geq 0$. From force balance we have $N + mg = \frac{mv_1^2}{R}.$}
+\A{Hence, $\frac{mv_1^2}{R} - mg \geq 0$. Rearranging gives $v_1^2 \geq gR$.
+}
+%
+\item Using this inequality along with what you know about conservative forces, determine the minimum value of $v_0$, as a function of $g$ and $R$, which ensures the mass will not leave the track as it passes through the loop. 
+%
+\A{Only conservative forces acting so energy is conserved.}
+\A{$E = \frac{1}{2}mv_0^2 = \frac{1}{2}mv_1^2 + 2mgR$}
+\A{Rearrange for $v_1^2$ and substitute into the inequality from the previous part: $v_0^2 - 4gR \geq gR$.}
+\A{Minimum value of $v_0$ is thus $v_0 = \sqrt{5gR}$.}
 \end{enumerate}
 }

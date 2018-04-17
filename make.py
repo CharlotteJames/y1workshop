@@ -11,6 +11,7 @@ import errno
 worksheets = [
     'complex_algebra',
     'dynamics',
+    'dynamics_2018',
     'eigenvalues_and_eigenvectors',
     'groups',
     'linear_systems',
